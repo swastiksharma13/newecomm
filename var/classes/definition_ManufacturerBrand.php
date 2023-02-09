@@ -1,21 +1,21 @@
 <?php
 
 /**
- * Inheritance: yes
+ * Inheritance: no
  * Variants: no
  *
  * Fields Summary:
- * - Warrenty [input]
- * - WarrentyDetails [textarea]
+ * - name [input]
+ * - logo [imageGallery]
  */
 
 return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
    'dao' => NULL,
-   'id' => 'Warrenty',
-   'name' => 'Warrenty',
+   'id' => 'manufacturerBrand',
+   'name' => 'ManufacturerBrand',
    'description' => '',
    'creationDate' => 0,
-   'modificationDate' => 1675943722,
+   'modificationDate' => 1675962164,
    'userOwner' => 2,
    'userModification' => 2,
    'parentClass' => '',
@@ -27,7 +27,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
    'encryptedTables' => 
   array (
   ),
-   'allowInherit' => true,
+   'allowInherit' => false,
    'allowVariants' => false,
    'showVariants' => false,
    'fieldDefinitions' => 
@@ -50,10 +50,10 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
     array (
       0 => 
       Pimcore\Model\DataObject\ClassDefinition\Layout\Panel::__set_state(array(
-         'name' => 'Warrenty',
+         'name' => 'Manufacturer',
          'type' => NULL,
          'region' => NULL,
-         'title' => 'Warrenty',
+         'title' => 'Manufacturer',
          'width' => '',
          'height' => '',
          'collapsible' => false,
@@ -65,8 +65,8 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
         array (
           0 => 
           Pimcore\Model\DataObject\ClassDefinition\Data\Input::__set_state(array(
-             'name' => 'Warrenty',
-             'title' => 'Warrenty',
+             'name' => 'name',
+             'title' => 'Name',
              'tooltip' => '',
              'mandatory' => false,
              'noteditable' => false,
@@ -95,9 +95,9 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
              'defaultValueGenerator' => '',
           )),
           1 => 
-          Pimcore\Model\DataObject\ClassDefinition\Data\Textarea::__set_state(array(
-             'name' => 'WarrentyDetails',
-             'title' => 'Warrenty Details',
+          Pimcore\Model\DataObject\ClassDefinition\Data\ImageGallery::__set_state(array(
+             'name' => 'logo',
+             'title' => 'Logo',
              'tooltip' => '',
              'mandatory' => false,
              'noteditable' => false,
@@ -106,7 +106,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
              'style' => '',
              'permissions' => NULL,
              'datatype' => 'data',
-             'fieldtype' => 'textarea',
+             'fieldtype' => 'imageGallery',
              'relationType' => false,
              'invisible' => false,
              'visibleGridView' => false,
@@ -114,11 +114,12 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
              'blockedVarsForExport' => 
             array (
             ),
-             'width' => '',
-             'height' => '',
-             'maxLength' => NULL,
-             'showCharCount' => false,
-             'excludeFromSearchIndex' => false,
+             'width' => 300,
+             'height' => 300,
+             'uploadPath' => '',
+             'ratioX' => NULL,
+             'ratioY' => NULL,
+             'predefinedDataTemplates' => '',
           )),
         ),
          'locked' => false,
@@ -129,7 +130,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
          'layout' => NULL,
          'border' => false,
          'icon' => '',
-         'labelWidth' => 0,
+         'labelWidth' => 100,
          'labelAlign' => 'left',
       )),
     ),
@@ -146,7 +147,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
   )),
    'icon' => '',
    'previewUrl' => '',
-   'group' => '',
+   'group' => 'Product Data',
    'showAppLoggerTab' => false,
    'linkGeneratorReference' => '',
    'previewGeneratorReference' => '',

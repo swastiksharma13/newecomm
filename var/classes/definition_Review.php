@@ -5,6 +5,7 @@
  * Variants: no
  *
  * Fields Summary:
+ * - yourName [input]
  * - Review [wysiwyg]
  * - Rating [slider]
  */
@@ -15,7 +16,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
    'name' => 'Review',
    'description' => '',
    'creationDate' => 0,
-   'modificationDate' => 1675942802,
+   'modificationDate' => 1675963261,
    'userOwner' => 2,
    'userModification' => 2,
    'parentClass' => '',
@@ -79,6 +80,37 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
              'children' => 
             array (
               0 => 
+              Pimcore\Model\DataObject\ClassDefinition\Data\Input::__set_state(array(
+                 'name' => 'yourName',
+                 'title' => 'Your Name',
+                 'tooltip' => '',
+                 'mandatory' => false,
+                 'noteditable' => false,
+                 'index' => false,
+                 'locked' => false,
+                 'style' => '',
+                 'permissions' => NULL,
+                 'datatype' => 'data',
+                 'fieldtype' => 'input',
+                 'relationType' => false,
+                 'invisible' => false,
+                 'visibleGridView' => false,
+                 'visibleSearch' => false,
+                 'blockedVarsForExport' => 
+                array (
+                ),
+                 'width' => '',
+                 'defaultValue' => NULL,
+                 'columnLength' => 190,
+                 'regex' => '',
+                 'regexFlags' => 
+                array (
+                ),
+                 'unique' => false,
+                 'showCharCount' => false,
+                 'defaultValueGenerator' => '',
+              )),
+              1 => 
               Pimcore\Model\DataObject\ClassDefinition\Data\Wysiwyg::__set_state(array(
                  'name' => 'Review',
                  'title' => 'Review',
@@ -104,7 +136,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'excludeFromSearchIndex' => false,
                  'maxCharacters' => '',
               )),
-              1 => 
+              2 => 
               Pimcore\Model\DataObject\ClassDefinition\Data\Slider::__set_state(array(
                  'name' => 'Rating',
                  'title' => 'Rating',
@@ -200,48 +232,6 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
    'enableGridLocking' => false,
    'deletedDataComponents' => 
   array (
-    0 => 
-    Pimcore\Model\DataObject\ClassDefinition\Data\ManyToManyObjectRelation::__set_state(array(
-       'name' => 'LaptopReview',
-       'title' => 'Laptop Review',
-       'tooltip' => '',
-       'mandatory' => false,
-       'noteditable' => false,
-       'index' => false,
-       'locked' => false,
-       'style' => '',
-       'permissions' => NULL,
-       'datatype' => 'data',
-       'fieldtype' => 'manyToManyObjectRelation',
-       'relationType' => true,
-       'invisible' => false,
-       'visibleGridView' => false,
-       'visibleSearch' => false,
-       'blockedVarsForExport' => 
-      array (
-      ),
-       'classes' => 
-      array (
-        0 => 
-        array (
-          'classes' => 'Laptop',
-        ),
-      ),
-       'pathFormatterClass' => '',
-       'width' => '',
-       'height' => '',
-       'maxItems' => NULL,
-       'queryColumnType' => 'text',
-       'visibleFields' => 
-      array (
-      ),
-       'allowToCreateNewObject' => false,
-       'optimizedAdminLoading' => false,
-       'enableTextSelection' => false,
-       'visibleFieldDefinitions' => 
-      array (
-      ),
-    )),
   ),
    'blockedVarsForExport' => 
   array (

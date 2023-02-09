@@ -7,16 +7,16 @@
  * Fields Summary:
  * - localizedfields [localizedfields]
  * -- Name [input]
- * - laptops [reverseObjectRelation]
+ * - electronic [reverseObjectRelation]
  */
 
 return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
    'dao' => NULL,
-   'id' => 'Category',
+   'id' => 'category',
    'name' => 'Category',
    'description' => '',
    'creationDate' => 0,
-   'modificationDate' => 1675944757,
+   'modificationDate' => 1675962142,
    'userOwner' => 2,
    'userModification' => 2,
    'parentClass' => '',
@@ -83,12 +83,12 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
               Pimcore\Model\DataObject\ClassDefinition\Data\Localizedfields::__set_state(array(
                  'name' => 'localizedfields',
                  'title' => '',
-                 'tooltip' => NULL,
-                 'mandatory' => NULL,
-                 'noteditable' => NULL,
+                 'tooltip' => '',
+                 'mandatory' => false,
+                 'noteditable' => false,
                  'index' => NULL,
                  'locked' => false,
-                 'style' => NULL,
+                 'style' => '',
                  'permissions' => NULL,
                  'datatype' => 'data',
                  'fieldtype' => 'localizedfields',
@@ -180,8 +180,8 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
             array (
               0 => 
               Pimcore\Model\DataObject\ClassDefinition\Data\ReverseObjectRelation::__set_state(array(
-                 'name' => 'laptops',
-                 'title' => 'Laptops',
+                 'name' => 'electronic',
+                 'title' => 'Electronic',
                  'tooltip' => '',
                  'mandatory' => false,
                  'noteditable' => false,
@@ -212,9 +212,9 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'visibleFieldDefinitions' => 
                 array (
                 ),
-                 'ownerClassName' => 'Laptop',
+                 'ownerClassName' => 'Electronic',
                  'ownerClassId' => NULL,
-                 'ownerFieldName' => 'Category',
+                 'ownerFieldName' => 'category',
                  'lazyLoading' => true,
               )),
             ),
@@ -250,9 +250,9 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
      'labelWidth' => 100,
      'labelAlign' => 'left',
   )),
-   'icon' => '',
+   'icon' => '/bundles/pimcoreadmin/img/flat-color-icons/genealogy.svg',
    'previewUrl' => '',
-   'group' => '',
+   'group' => 'Product Data',
    'showAppLoggerTab' => false,
    'linkGeneratorReference' => '',
    'previewGeneratorReference' => '',
