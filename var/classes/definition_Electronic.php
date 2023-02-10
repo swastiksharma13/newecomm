@@ -854,6 +854,107 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
    'enableGridLocking' => false,
    'deletedDataComponents' => 
   array (
+    0 => 
+    Pimcore\Model\DataObject\ClassDefinition\Data\Date::__set_state(array(
+       'name' => 'manufacturingDate',
+       'title' => 'Manufacturing Date',
+       'tooltip' => '',
+       'mandatory' => false,
+       'noteditable' => false,
+       'index' => false,
+       'locked' => false,
+       'style' => '',
+       'permissions' => NULL,
+       'datatype' => 'data',
+       'fieldtype' => 'date',
+       'relationType' => false,
+       'invisible' => false,
+       'visibleGridView' => false,
+       'visibleSearch' => false,
+       'blockedVarsForExport' => 
+      array (
+      ),
+       'queryColumnType' => 'bigint(20)',
+       'columnType' => 'bigint(20)',
+       'defaultValue' => NULL,
+       'useCurrentDate' => false,
+       'defaultValueGenerator' => '',
+    )),
+    1 => 
+    Pimcore\Model\DataObject\ClassDefinition\Data\Date::__set_state(array(
+       'name' => 'releaseDate',
+       'title' => 'Release Date',
+       'tooltip' => '',
+       'mandatory' => false,
+       'noteditable' => false,
+       'index' => false,
+       'locked' => false,
+       'style' => '',
+       'permissions' => NULL,
+       'datatype' => 'data',
+       'fieldtype' => 'date',
+       'relationType' => false,
+       'invisible' => false,
+       'visibleGridView' => false,
+       'visibleSearch' => false,
+       'blockedVarsForExport' => 
+      array (
+      ),
+       'queryColumnType' => 'bigint(20)',
+       'columnType' => 'bigint(20)',
+       'defaultValue' => NULL,
+       'useCurrentDate' => false,
+       'defaultValueGenerator' => '',
+    )),
+    2 => 
+    Pimcore\Model\DataObject\ClassDefinition\Data\ManyToOneRelation::__set_state(array(
+       'name' => 'specific',
+       'title' => 'Specific',
+       'tooltip' => '',
+       'mandatory' => false,
+       'noteditable' => false,
+       'index' => false,
+       'locked' => false,
+       'style' => '',
+       'permissions' => NULL,
+       'datatype' => 'data',
+       'fieldtype' => 'manyToOneRelation',
+       'relationType' => true,
+       'invisible' => false,
+       'visibleGridView' => false,
+       'visibleSearch' => false,
+       'blockedVarsForExport' => 
+      array (
+      ),
+       'classes' => 
+      array (
+        0 => 
+        array (
+          'classes' => 'lappa',
+        ),
+        1 => 
+        array (
+          'classes' => 'mobbba',
+        ),
+      ),
+       'pathFormatterClass' => '',
+       'width' => '',
+       'assetUploadPath' => '',
+       'queryColumnType' => 
+      array (
+        'id' => 'int(11)',
+        'type' => 'enum(\'document\',\'asset\',\'object\')',
+      ),
+       'objectsAllowed' => true,
+       'assetsAllowed' => false,
+       'assetTypes' => 
+      array (
+      ),
+       'documentsAllowed' => false,
+       'documentTypes' => 
+      array (
+      ),
+    )),
   ),
    'blockedVarsForExport' => 
   array (
