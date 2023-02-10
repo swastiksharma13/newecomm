@@ -5,17 +5,17 @@
  * Variants: no
  *
  * Fields Summary:
- * - Warrenty [input]
- * - WarrentyDetails [textarea]
+ * - Warranty [input]
+ * - WarrantyDetails [textarea]
  */
 
 return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
    'dao' => NULL,
-   'id' => 'Warrenty',
-   'name' => 'Warrenty',
+   'id' => 'Warranty',
+   'name' => 'Warranty',
    'description' => '',
    'creationDate' => 0,
-   'modificationDate' => 1675943722,
+   'modificationDate' => 1676028165,
    'userOwner' => 2,
    'userModification' => 2,
    'parentClass' => '',
@@ -50,10 +50,10 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
     array (
       0 => 
       Pimcore\Model\DataObject\ClassDefinition\Layout\Panel::__set_state(array(
-         'name' => 'Warrenty',
+         'name' => 'Warranty',
          'type' => NULL,
          'region' => NULL,
-         'title' => 'Warrenty',
+         'title' => 'Warranty',
          'width' => '',
          'height' => '',
          'collapsible' => false,
@@ -65,8 +65,8 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
         array (
           0 => 
           Pimcore\Model\DataObject\ClassDefinition\Data\Input::__set_state(array(
-             'name' => 'Warrenty',
-             'title' => 'Warrenty',
+             'name' => 'Warranty',
+             'title' => 'Warranty',
              'tooltip' => '',
              'mandatory' => false,
              'noteditable' => false,
@@ -96,8 +96,8 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
           )),
           1 => 
           Pimcore\Model\DataObject\ClassDefinition\Data\Textarea::__set_state(array(
-             'name' => 'WarrentyDetails',
-             'title' => 'Warrenty Details',
+             'name' => 'WarrantyDetails',
+             'title' => 'Warranty Details',
              'tooltip' => '',
              'mandatory' => false,
              'noteditable' => false,
@@ -179,6 +179,34 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
    'enableGridLocking' => false,
    'deletedDataComponents' => 
   array (
+    0 => 
+    Pimcore\Model\DataObject\ClassDefinition\Data\Textarea::__set_state(array(
+       'name' => 'WarrentyDetails',
+       'title' => 'Warrenty Details',
+       'tooltip' => '',
+       'mandatory' => false,
+       'noteditable' => false,
+       'index' => false,
+       'locked' => false,
+       'style' => '',
+       'permissions' => NULL,
+       'datatype' => 'data',
+       'fieldtype' => 'textarea',
+       'relationType' => false,
+       'invisible' => false,
+       'visibleGridView' => false,
+       'visibleSearch' => false,
+       'blockedVarsForExport' => 
+      array (
+      ),
+       'width' => '',
+       'height' => '',
+       'maxLength' => NULL,
+       'showCharCount' => false,
+       'excludeFromSearchIndex' => false,
+       'queryColumnType' => 'longtext',
+       'columnType' => 'longtext',
+    )),
   ),
    'blockedVarsForExport' => 
   array (

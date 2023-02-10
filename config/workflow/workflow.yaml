@@ -11,7 +11,7 @@ pimcore:
           label: "New product"
           color: "#377ea9"
           permissions:
-            - objectLayout: 2
+            - objectLayout: 1
 
         rejected:
           label: "Rejected product"
@@ -31,7 +31,7 @@ pimcore:
           title: "Updating Media"
           color: "#d9ef36"
           permissions:
-            - objectLayout: 1
+            - objectLayout: 2
 
       transitions:
         reject_product:
