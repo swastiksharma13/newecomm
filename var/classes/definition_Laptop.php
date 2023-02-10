@@ -15,7 +15,7 @@
  * - LaptopMains [objectbricks]
  * - LaptopSpecs [objectbricks]
  * - ManufacturingDate [datetime]
- * - SellingDate [datetime]
+ * - ReleaseDate [datetime]
  * - Delivery [manyToManyObjectRelation]
  * - Review [manyToOneRelation]
  */
@@ -26,7 +26,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
    'name' => 'Laptop',
    'description' => '',
    'creationDate' => 0,
-   'modificationDate' => 1675945837,
+   'modificationDate' => 1676012282,
    'userOwner' => 2,
    'userModification' => 2,
    'parentClass' => '',
@@ -465,6 +465,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                 ),
                  'allowedTypes' => 
                 array (
+                  0 => 'LaptopSpecs',
                 ),
                  'maxItems' => NULL,
                  'border' => false,
@@ -524,8 +525,8 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
               )),
               1 => 
               Pimcore\Model\DataObject\ClassDefinition\Data\Datetime::__set_state(array(
-                 'name' => 'SellingDate',
-                 'title' => 'Selling Date',
+                 'name' => 'ReleaseDate',
+                 'title' => 'Release Date',
                  'tooltip' => '',
                  'mandatory' => false,
                  'noteditable' => false,
@@ -751,6 +752,32 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
    'enableGridLocking' => false,
    'deletedDataComponents' => 
   array (
+    0 => 
+    Pimcore\Model\DataObject\ClassDefinition\Data\Datetime::__set_state(array(
+       'name' => 'SellingDate',
+       'title' => 'Selling Date',
+       'tooltip' => '',
+       'mandatory' => false,
+       'noteditable' => false,
+       'index' => false,
+       'locked' => false,
+       'style' => '',
+       'permissions' => NULL,
+       'datatype' => 'data',
+       'fieldtype' => 'datetime',
+       'relationType' => false,
+       'invisible' => false,
+       'visibleGridView' => false,
+       'visibleSearch' => false,
+       'blockedVarsForExport' => 
+      array (
+      ),
+       'queryColumnType' => 'bigint(20)',
+       'columnType' => 'bigint(20)',
+       'defaultValue' => NULL,
+       'useCurrentDate' => false,
+       'defaultValueGenerator' => '',
+    )),
   ),
    'blockedVarsForExport' => 
   array (
