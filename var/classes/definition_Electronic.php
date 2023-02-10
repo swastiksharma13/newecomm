@@ -16,6 +16,7 @@
  * - imageGallary [imageGallery]
  * - genericImage [imageGallery]
  * - specific [manyToOneRelation]
+ * - Specifications [objectbricks]
  * - saleInformation [objectbricks]
  * - location [geopoint]
  * - objectType [select]
@@ -28,7 +29,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
    'name' => 'Electronic',
    'description' => '',
    'creationDate' => 0,
-   'modificationDate' => 1675967482,
+   'modificationDate' => 1676010684,
    'userOwner' => 2,
    'userModification' => 2,
    'parentClass' => '',
@@ -561,6 +562,33 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                 array (
                 ),
               )),
+              1 => 
+              Pimcore\Model\DataObject\ClassDefinition\Data\Objectbricks::__set_state(array(
+                 'name' => 'Specifications',
+                 'title' => 'Specifications',
+                 'tooltip' => '',
+                 'mandatory' => false,
+                 'noteditable' => false,
+                 'index' => false,
+                 'locked' => false,
+                 'style' => '',
+                 'permissions' => NULL,
+                 'datatype' => 'data',
+                 'fieldtype' => 'objectbricks',
+                 'relationType' => false,
+                 'invisible' => false,
+                 'visibleGridView' => false,
+                 'visibleSearch' => false,
+                 'blockedVarsForExport' => 
+                array (
+                ),
+                 'allowedTypes' => 
+                array (
+                  0 => 'SpecificationSpeaker',
+                ),
+                 'maxItems' => NULL,
+                 'border' => false,
+              )),
             ),
              'locked' => false,
              'blockedVarsForExport' => 
@@ -610,6 +638,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                 ),
                  'allowedTypes' => 
                 array (
+                  0 => 'SaleInformation',
                 ),
                  'maxItems' => NULL,
                  'border' => false,
