@@ -15,7 +15,6 @@
  * - category [manyToManyObjectRelation]
  * - imageGallary [imageGallery]
  * - genericImage [imageGallery]
- * - specific [manyToOneRelation]
  * - Specifications [objectbricks]
  * - saleInformation [objectbricks]
  * - location [geopoint]
@@ -29,7 +28,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
    'name' => 'Electronic',
    'description' => '',
    'creationDate' => 0,
-   'modificationDate' => 1676010684,
+   'modificationDate' => 1676027123,
    'userOwner' => 2,
    'userModification' => 2,
    'parentClass' => '',
@@ -519,50 +518,6 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
              'children' => 
             array (
               0 => 
-              Pimcore\Model\DataObject\ClassDefinition\Data\ManyToOneRelation::__set_state(array(
-                 'name' => 'specific',
-                 'title' => 'Specific',
-                 'tooltip' => '',
-                 'mandatory' => false,
-                 'noteditable' => false,
-                 'index' => false,
-                 'locked' => false,
-                 'style' => '',
-                 'permissions' => NULL,
-                 'datatype' => 'data',
-                 'fieldtype' => 'manyToOneRelation',
-                 'relationType' => true,
-                 'invisible' => false,
-                 'visibleGridView' => false,
-                 'visibleSearch' => false,
-                 'blockedVarsForExport' => 
-                array (
-                ),
-                 'classes' => 
-                array (
-                  0 => 
-                  array (
-                    'classes' => 'lappa',
-                  ),
-                  1 => 
-                  array (
-                    'classes' => 'mobbba',
-                  ),
-                ),
-                 'pathFormatterClass' => '',
-                 'width' => '',
-                 'assetUploadPath' => '',
-                 'objectsAllowed' => true,
-                 'assetsAllowed' => false,
-                 'assetTypes' => 
-                array (
-                ),
-                 'documentsAllowed' => false,
-                 'documentTypes' => 
-                array (
-                ),
-              )),
-              1 => 
               Pimcore\Model\DataObject\ClassDefinition\Data\Objectbricks::__set_state(array(
                  'name' => 'Specifications',
                  'title' => 'Specifications',

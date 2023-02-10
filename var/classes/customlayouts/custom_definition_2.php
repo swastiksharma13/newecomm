@@ -1,38 +1,19 @@
 <?php
 
 /**
- * Inheritance: no
- * Variants: no
- *
- * Fields Summary:
- * - name [input]
- * - logo [imageGallery]
- */
+*/
 
-return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
+
+return Pimcore\Model\DataObject\ClassDefinition\CustomLayout::__set_state(array(
    'dao' => NULL,
-   'id' => 'manufacturerBrand',
-   'name' => 'ManufacturerBrand',
+   'id' => '2',
+   'name' => 'Media',
    'description' => '',
-   'creationDate' => 0,
-   'modificationDate' => 1675962164,
+   'creationDate' => 1676026882,
+   'modificationDate' => 1676026908,
    'userOwner' => 2,
-   'userModification' => 2,
-   'parentClass' => '',
-   'implementsInterfaces' => '',
-   'listingParentClass' => '',
-   'useTraits' => '',
-   'listingUseTraits' => '',
-   'encryption' => false,
-   'encryptedTables' => 
-  array (
-  ),
-   'allowInherit' => false,
-   'allowVariants' => false,
-   'showVariants' => false,
-   'fieldDefinitions' => 
-  array (
-  ),
+   'userModification' => 0,
+   'classId' => 'electronic',
    'layoutDefinitions' => 
   Pimcore\Model\DataObject\ClassDefinition\Layout\Panel::__set_state(array(
      'name' => 'pimcore_root',
@@ -50,10 +31,10 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
     array (
       0 => 
       Pimcore\Model\DataObject\ClassDefinition\Layout\Panel::__set_state(array(
-         'name' => 'Manufacturer',
+         'name' => 'Media',
          'type' => NULL,
          'region' => NULL,
-         'title' => 'Manufacturer',
+         'title' => 'Media',
          'width' => '',
          'height' => '',
          'collapsible' => false,
@@ -64,9 +45,9 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
          'children' => 
         array (
           0 => 
-          Pimcore\Model\DataObject\ClassDefinition\Data\Input::__set_state(array(
-             'name' => 'name',
-             'title' => 'Name',
+          Pimcore\Model\DataObject\ClassDefinition\Data\ImageGallery::__set_state(array(
+             'name' => 'imageGallary',
+             'title' => 'Image Gallary',
              'tooltip' => '',
              'mandatory' => false,
              'noteditable' => false,
@@ -75,7 +56,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
              'style' => '',
              'permissions' => NULL,
              'datatype' => 'data',
-             'fieldtype' => 'input',
+             'fieldtype' => 'imageGallery',
              'relationType' => false,
              'invisible' => false,
              'visibleGridView' => false,
@@ -83,21 +64,17 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
              'blockedVarsForExport' => 
             array (
             ),
-             'width' => '',
-             'defaultValue' => NULL,
-             'columnLength' => 190,
-             'regex' => '',
-             'regexFlags' => 
-            array (
-            ),
-             'unique' => false,
-             'showCharCount' => false,
-             'defaultValueGenerator' => '',
+             'width' => 300,
+             'height' => 300,
+             'uploadPath' => '',
+             'ratioX' => NULL,
+             'ratioY' => NULL,
+             'predefinedDataTemplates' => '',
           )),
           1 => 
           Pimcore\Model\DataObject\ClassDefinition\Data\ImageGallery::__set_state(array(
-             'name' => 'logo',
-             'title' => 'Logo',
+             'name' => 'genericImage',
+             'title' => 'Generic Image',
              'tooltip' => '',
              'mandatory' => false,
              'noteditable' => false,
@@ -145,42 +122,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
      'labelWidth' => 100,
      'labelAlign' => 'left',
   )),
-   'icon' => '',
-   'previewUrl' => '',
-   'group' => 'Product Data',
-   'showAppLoggerTab' => false,
-   'linkGeneratorReference' => '',
-   'previewGeneratorReference' => '',
-   'compositeIndices' => 
-  array (
-  ),
-   'generateTypeDeclarations' => true,
-   'showFieldLookup' => false,
-   'propertyVisibility' => 
-  array (
-    'grid' => 
-    array (
-      'id' => true,
-      'key' => false,
-      'path' => true,
-      'published' => true,
-      'modificationDate' => true,
-      'creationDate' => true,
-    ),
-    'search' => 
-    array (
-      'id' => true,
-      'key' => false,
-      'path' => true,
-      'published' => true,
-      'modificationDate' => true,
-      'creationDate' => true,
-    ),
-  ),
-   'enableGridLocking' => false,
-   'deletedDataComponents' => 
-  array (
-  ),
+   'default' => 0,
    'blockedVarsForExport' => 
   array (
   ),
