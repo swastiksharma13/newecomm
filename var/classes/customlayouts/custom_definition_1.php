@@ -1,6 +1,7 @@
 <?php
 
 /**
+* Media person can update media
 */
 
 
@@ -8,9 +9,9 @@ return Pimcore\Model\DataObject\ClassDefinition\CustomLayout::__set_state(array(
    'dao' => NULL,
    'id' => '1',
    'name' => 'media',
-   'description' => '',
+   'description' => 'Media person can update media',
    'creationDate' => 1675968272,
-   'modificationDate' => 1675968320,
+   'modificationDate' => 1676026037,
    'userOwner' => 2,
    'userModification' => 0,
    'classId' => 'electronic',
