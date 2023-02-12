@@ -5,17 +5,16 @@
  * Variants: no
  *
  * Fields Summary:
- * - name [input]
- * - logo [imageGallery]
+ * - whatIsInBox [wysiwyg]
  */
 
 return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
    'dao' => NULL,
-   'id' => 'manufacturerBrand',
-   'name' => 'ManufacturerBrand',
+   'id' => 'whatIsInBox',
+   'name' => 'WhatIsInBox',
    'description' => '',
    'creationDate' => 0,
-   'modificationDate' => 1675962164,
+   'modificationDate' => 1676185363,
    'userOwner' => 2,
    'userModification' => 2,
    'parentClass' => '',
@@ -50,10 +49,10 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
     array (
       0 => 
       Pimcore\Model\DataObject\ClassDefinition\Layout\Panel::__set_state(array(
-         'name' => 'Manufacturer',
+         'name' => 'Box Detail',
          'type' => NULL,
          'region' => NULL,
-         'title' => 'Manufacturer',
+         'title' => 'Box Detail',
          'width' => '',
          'height' => '',
          'collapsible' => false,
@@ -64,9 +63,9 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
          'children' => 
         array (
           0 => 
-          Pimcore\Model\DataObject\ClassDefinition\Data\Input::__set_state(array(
-             'name' => 'name',
-             'title' => 'Name',
+          Pimcore\Model\DataObject\ClassDefinition\Data\Wysiwyg::__set_state(array(
+             'name' => 'whatIsInBox',
+             'title' => 'What Is In Box',
              'tooltip' => '',
              'mandatory' => false,
              'noteditable' => false,
@@ -75,7 +74,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
              'style' => '',
              'permissions' => NULL,
              'datatype' => 'data',
-             'fieldtype' => 'input',
+             'fieldtype' => 'wysiwyg',
              'relationType' => false,
              'invisible' => false,
              'visibleGridView' => false,
@@ -84,42 +83,10 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
             array (
             ),
              'width' => '',
-             'defaultValue' => NULL,
-             'columnLength' => 190,
-             'regex' => '',
-             'regexFlags' => 
-            array (
-            ),
-             'unique' => false,
-             'showCharCount' => false,
-             'defaultValueGenerator' => '',
-          )),
-          1 => 
-          Pimcore\Model\DataObject\ClassDefinition\Data\ImageGallery::__set_state(array(
-             'name' => 'logo',
-             'title' => 'Logo',
-             'tooltip' => '',
-             'mandatory' => false,
-             'noteditable' => false,
-             'index' => false,
-             'locked' => false,
-             'style' => '',
-             'permissions' => NULL,
-             'datatype' => 'data',
-             'fieldtype' => 'imageGallery',
-             'relationType' => false,
-             'invisible' => false,
-             'visibleGridView' => false,
-             'visibleSearch' => false,
-             'blockedVarsForExport' => 
-            array (
-            ),
-             'width' => 300,
-             'height' => 300,
-             'uploadPath' => '',
-             'ratioX' => NULL,
-             'ratioY' => NULL,
-             'predefinedDataTemplates' => '',
+             'height' => '',
+             'toolbarConfig' => '',
+             'excludeFromSearchIndex' => false,
+             'maxCharacters' => '',
           )),
         ),
          'locked' => false,
@@ -147,7 +114,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
   )),
    'icon' => '',
    'previewUrl' => '',
-   'group' => 'Product Data',
+   'group' => '',
    'showAppLoggerTab' => false,
    'linkGeneratorReference' => '',
    'previewGeneratorReference' => '',
