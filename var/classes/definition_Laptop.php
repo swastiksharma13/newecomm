@@ -2,7 +2,7 @@
 
 /**
  * Inheritance: yes
- * Variants: no
+ * Variants: yes
  *
  * Fields Summary:
  * - Laptop_ID [input]
@@ -26,7 +26,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
    'name' => 'Laptop',
    'description' => '',
    'creationDate' => 0,
-   'modificationDate' => 1676012282,
+   'modificationDate' => 1676221294,
    'userOwner' => 2,
    'userModification' => 2,
    'parentClass' => '',
@@ -39,8 +39,8 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
   array (
   ),
    'allowInherit' => true,
-   'allowVariants' => false,
-   'showVariants' => false,
+   'allowVariants' => true,
+   'showVariants' => true,
    'fieldDefinitions' => 
   array (
   ),
@@ -749,35 +749,9 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
       'creationDate' => true,
     ),
   ),
-   'enableGridLocking' => false,
+   'enableGridLocking' => true,
    'deletedDataComponents' => 
   array (
-    0 => 
-    Pimcore\Model\DataObject\ClassDefinition\Data\Datetime::__set_state(array(
-       'name' => 'SellingDate',
-       'title' => 'Selling Date',
-       'tooltip' => '',
-       'mandatory' => false,
-       'noteditable' => false,
-       'index' => false,
-       'locked' => false,
-       'style' => '',
-       'permissions' => NULL,
-       'datatype' => 'data',
-       'fieldtype' => 'datetime',
-       'relationType' => false,
-       'invisible' => false,
-       'visibleGridView' => false,
-       'visibleSearch' => false,
-       'blockedVarsForExport' => 
-      array (
-      ),
-       'queryColumnType' => 'bigint(20)',
-       'columnType' => 'bigint(20)',
-       'defaultValue' => NULL,
-       'useCurrentDate' => false,
-       'defaultValueGenerator' => '',
-    )),
   ),
    'blockedVarsForExport' => 
   array (

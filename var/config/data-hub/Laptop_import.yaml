@@ -1,0 +1,13 @@
+pimcore_data_hub:
+    configurations:
+        Laptop_import:
+            general:
+                type: dataImporterDataObject
+                path: null
+                name: Laptop_import
+                modificationDate: 1676225583
+                createDate: 1676225583
+            workspaces: {  }
+            permissions:
+                user: {  }
+                role: {  }

@@ -16,7 +16,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
    'name' => 'Brand',
    'description' => '',
    'creationDate' => 0,
-   'modificationDate' => 1675963404,
+   'modificationDate' => 1676221309,
    'userOwner' => 2,
    'userModification' => 2,
    'parentClass' => '',
@@ -230,35 +230,9 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
       'creationDate' => true,
     ),
   ),
-   'enableGridLocking' => false,
+   'enableGridLocking' => true,
    'deletedDataComponents' => 
   array (
-    0 => 
-    Pimcore\Model\DataObject\ClassDefinition\Data\Image::__set_state(array(
-       'name' => 'B_Image',
-       'title' => 'B _ Image',
-       'tooltip' => '',
-       'mandatory' => false,
-       'noteditable' => false,
-       'index' => false,
-       'locked' => false,
-       'style' => '',
-       'permissions' => NULL,
-       'datatype' => 'data',
-       'fieldtype' => 'image',
-       'relationType' => false,
-       'invisible' => false,
-       'visibleGridView' => false,
-       'visibleSearch' => false,
-       'blockedVarsForExport' => 
-      array (
-      ),
-       'queryColumnType' => 'int(11)',
-       'columnType' => 'int(11)',
-       'width' => '',
-       'height' => '',
-       'uploadPath' => '',
-    )),
   ),
    'blockedVarsForExport' => 
   array (
