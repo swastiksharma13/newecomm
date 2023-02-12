@@ -12,11 +12,11 @@
 
 return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
    'dao' => NULL,
-   'id' => 'category',
+   'id' => '1',
    'name' => 'Category',
    'description' => '',
    'creationDate' => 0,
-   'modificationDate' => 1675962142,
+   'modificationDate' => 1676216644,
    'userOwner' => 2,
    'userModification' => 2,
    'parentClass' => '',
@@ -66,10 +66,10 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
         array (
           0 => 
           Pimcore\Model\DataObject\ClassDefinition\Layout\Panel::__set_state(array(
-             'name' => 'Layout',
+             'name' => 'Base Data',
              'type' => NULL,
              'region' => NULL,
-             'title' => '',
+             'title' => 'Base Data',
              'width' => '',
              'height' => '',
              'collapsible' => false,
@@ -168,7 +168,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
              'name' => 'Category',
              'type' => NULL,
              'region' => NULL,
-             'title' => '',
+             'title' => 'Category',
              'width' => '',
              'height' => '',
              'collapsible' => false,

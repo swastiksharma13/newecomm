@@ -5,7 +5,7 @@
  * Variants: no
  *
  * Fields Summary:
- * - BrandName [select]
+ * - BrandName [input]
  */
 
 return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
@@ -14,7 +14,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
    'name' => 'Brand',
    'description' => '',
    'creationDate' => 0,
-   'modificationDate' => 1676022655,
+   'modificationDate' => 1676034939,
    'userOwner' => 2,
    'userModification' => 2,
    'parentClass' => '',
@@ -48,11 +48,11 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
      'children' => 
     array (
       0 => 
-      Pimcore\Model\DataObject\ClassDefinition\Layout\Tabpanel::__set_state(array(
-         'name' => 'Layout',
+      Pimcore\Model\DataObject\ClassDefinition\Layout\Panel::__set_state(array(
+         'name' => 'BaseData',
          'type' => NULL,
          'region' => NULL,
-         'title' => '',
+         'title' => 'Base Data',
          'width' => '',
          'height' => '',
          'collapsible' => false,
@@ -63,71 +63,47 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
          'children' => 
         array (
           0 => 
-          Pimcore\Model\DataObject\ClassDefinition\Layout\Panel::__set_state(array(
-             'name' => 'Brand Details',
-             'type' => NULL,
-             'region' => NULL,
-             'title' => '',
-             'width' => '',
-             'height' => '',
-             'collapsible' => false,
-             'collapsed' => false,
-             'bodyStyle' => '',
-             'datatype' => 'layout',
-             'permissions' => NULL,
-             'children' => 
-            array (
-              0 => 
-              Pimcore\Model\DataObject\ClassDefinition\Data\Select::__set_state(array(
-                 'name' => 'BrandName',
-                 'title' => 'Brand Name',
-                 'tooltip' => '',
-                 'mandatory' => false,
-                 'noteditable' => false,
-                 'index' => false,
-                 'locked' => false,
-                 'style' => '',
-                 'permissions' => NULL,
-                 'datatype' => 'data',
-                 'fieldtype' => 'select',
-                 'relationType' => false,
-                 'invisible' => false,
-                 'visibleGridView' => false,
-                 'visibleSearch' => false,
-                 'blockedVarsForExport' => 
-                array (
-                ),
-                 'options' => 
-                array (
-                ),
-                 'width' => '',
-                 'defaultValue' => '',
-                 'optionsProviderClass' => '',
-                 'optionsProviderData' => '',
-                 'columnLength' => 190,
-                 'dynamicOptions' => false,
-                 'defaultValueGenerator' => '',
-              )),
-            ),
+          Pimcore\Model\DataObject\ClassDefinition\Data\Input::__set_state(array(
+             'name' => 'BrandName',
+             'title' => 'Brand Name',
+             'tooltip' => '',
+             'mandatory' => false,
+             'noteditable' => false,
+             'index' => false,
              'locked' => false,
+             'style' => '',
+             'permissions' => NULL,
+             'datatype' => 'data',
+             'fieldtype' => 'input',
+             'relationType' => false,
+             'invisible' => false,
+             'visibleGridView' => false,
+             'visibleSearch' => false,
              'blockedVarsForExport' => 
             array (
             ),
-             'fieldtype' => 'panel',
-             'layout' => NULL,
-             'border' => false,
-             'icon' => '',
-             'labelWidth' => 0,
-             'labelAlign' => 'left',
+             'width' => '',
+             'defaultValue' => NULL,
+             'columnLength' => 190,
+             'regex' => '',
+             'regexFlags' => 
+            array (
+            ),
+             'unique' => false,
+             'showCharCount' => false,
+             'defaultValueGenerator' => '',
           )),
         ),
          'locked' => false,
          'blockedVarsForExport' => 
         array (
         ),
-         'fieldtype' => 'tabpanel',
+         'fieldtype' => 'panel',
+         'layout' => NULL,
          'border' => false,
-         'tabPosition' => NULL,
+         'icon' => '',
+         'labelWidth' => 0,
+         'labelAlign' => 'left',
       )),
     ),
      'locked' => false,
@@ -141,7 +117,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
      'labelWidth' => 100,
      'labelAlign' => 'left',
   )),
-   'icon' => '',
+   'icon' => '/bundles/pimcoreadmin/img/flat-color-icons/copyright.svg',
    'previewUrl' => '',
    'group' => 'Master Data',
    'showAppLoggerTab' => false,
