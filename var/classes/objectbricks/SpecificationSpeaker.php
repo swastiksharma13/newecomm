@@ -10,6 +10,7 @@
  * - InternetServicesSupported [multiselect]
  * - Use [multiselect]
  * - Mount [multiselect]
+ * - ControllerType [select]
  * - Length [quantityValue]
  * - Width [quantityValue]
  * - Height [quantityValue]
@@ -511,6 +512,62 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
                  'optionsProviderClass' => '',
                  'optionsProviderData' => '',
                  'dynamicOptions' => false,
+              )),
+              2 => 
+              Pimcore\Model\DataObject\ClassDefinition\Data\Select::__set_state(array(
+                 'name' => 'ControllerType',
+                 'title' => 'Controller Type',
+                 'tooltip' => '',
+                 'mandatory' => false,
+                 'noteditable' => false,
+                 'index' => false,
+                 'locked' => false,
+                 'style' => '',
+                 'permissions' => NULL,
+                 'datatype' => 'data',
+                 'fieldtype' => 'select',
+                 'relationType' => false,
+                 'invisible' => false,
+                 'visibleGridView' => false,
+                 'visibleSearch' => false,
+                 'blockedVarsForExport' => 
+                array (
+                ),
+                 'options' => 
+                array (
+                  0 => 
+                  array (
+                    'key' => 'Amazon Alexa',
+                    'value' => 'Amazon Alexa',
+                  ),
+                  1 => 
+                  array (
+                    'key' => 'Google Assistant',
+                    'value' => 'Google Assistant',
+                  ),
+                  2 => 
+                  array (
+                    'key' => 'Remote Control',
+                    'value' => 'Remote Control',
+                  ),
+                  3 => 
+                  array (
+                    'key' => 'Touchpad Control',
+                    'value' => 'Touchpad Control',
+                  ),
+                  4 => 
+                  array (
+                    'key' => 'Button Control',
+                    'value' => 'Button Control',
+                  ),
+                ),
+                 'width' => '',
+                 'defaultValue' => '',
+                 'optionsProviderClass' => '',
+                 'optionsProviderData' => '',
+                 'columnLength' => 190,
+                 'dynamicOptions' => false,
+                 'defaultValueGenerator' => '',
               )),
             ),
              'locked' => false,

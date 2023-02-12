@@ -54,21 +54,21 @@ pimcore:
         start_reviewing:
           from: media_content
           to: content_prepared
-          guard: "is_fully_authenticated() and is_granted('ROLE_MEDIAROLE')"
+          guard: "is_fully_authenticated() and is_granted('ROLE_MEDIA')"
           options:
             label: "updating media to the product"
 
         editing_needed:
           from: content_prepared
           to: new
-          guard: "is_fully_authenticated() and is_granted('ROLE_REVIEWERROLE')"
+          guard: "is_fully_authenticated() and is_granted('ROLE_REVIEW')"
           options:
             label: "EntryUser edit the data"
 
         publish:
           from: content_prepared
           to: accepted
-          guard: "is_fully_authenticated() and is_granted('ROLE_REVIEWERROLE')"
+          guard: "is_fully_authenticated() and is_granted('ROLE_REVIEW')"
           options:
             label: "Publish the product"
             notes:
