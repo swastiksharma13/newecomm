@@ -14,16 +14,13 @@
  * - color [select]
  * - country [country]
  * - category [manyToManyObjectRelation]
-<<<<<<< HEAD
  * - Brand [manyToOneRelation]
  * - imageGallary [imageGallery]
  * - genericImage [imageGallery]
  * - Specifications [objectbricks]
-=======
  * - image [image]
  * - genericImage [imageGallery]
  * - attributes [objectbricks]
->>>>>>> bed20856c1303b15490a97c54ef6e861ddfe6692
  * - saleInformation [objectbricks]
  * - location [geopoint]
  * - objectType [select]
@@ -36,11 +33,10 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
    'name' => 'Electronic',
    'description' => '',
    'creationDate' => 0,
-<<<<<<< HEAD
+
    'modificationDate' => 1676216777,
-=======
+
    'modificationDate' => 1676207403,
->>>>>>> bed20856c1303b15490a97c54ef6e861ddfe6692
    'userOwner' => 2,
    'userModification' => 2,
    'parentClass' => '',
@@ -599,13 +595,8 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
             array (
               0 => 
               Pimcore\Model\DataObject\ClassDefinition\Data\Objectbricks::__set_state(array(
-<<<<<<< HEAD
-                 'name' => 'Specifications',
-                 'title' => '',
-=======
                  'name' => 'attributes',
                  'title' => 'Attributes',
->>>>>>> bed20856c1303b15490a97c54ef6e861ddfe6692
                  'tooltip' => '',
                  'mandatory' => false,
                  'noteditable' => false,
@@ -624,9 +615,6 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                 ),
                  'allowedTypes' => 
                 array (
-<<<<<<< HEAD
-                  0 => 'SpecificationSpeaker',
-=======
                   0 => 'CellularTechnology',
                   1 => 'CameraDescription',
                   2 => 'ScreenSize',
@@ -641,7 +629,6 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                   11 => 'warrentyDetails',
                   12 => 'portAndConnectivity',
                   13 => 'graphicCard',
->>>>>>> bed20856c1303b15490a97c54ef6e861ddfe6692
                 ),
                  'maxItems' => NULL,
                  'border' => false,
@@ -956,8 +943,6 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
    'enableGridLocking' => false,
    'deletedDataComponents' => 
   array (
-<<<<<<< HEAD
-=======
     0 => 
     Pimcore\Model\DataObject\ClassDefinition\Data\ImageGallery::__set_state(array(
        'name' => 'imageGallary',
@@ -995,7 +980,6 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
        'ratioY' => NULL,
        'predefinedDataTemplates' => '',
     )),
->>>>>>> bed20856c1303b15490a97c54ef6e861ddfe6692
   ),
    'blockedVarsForExport' => 
   array (
@@ -1003,4 +987,5 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
    'activeDispatchingEvents' => 
   array (
   ),
-));
+)
+);

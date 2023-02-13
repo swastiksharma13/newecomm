@@ -2,21 +2,12 @@
 
 /**
  * Fields Summary:
-<<<<<<< HEAD:var/classes/objectbricks/SaleInformation.php
- * - price [numeric]
- * - location [geobounds]
- * - princeInINR [calculatedValue]
- * - ConditionType [select]
- * - AvailabilityPieces [numeric]
- * - AvailabilityTime [select]
-=======
  * - priceInINR [numeric]
  * - availablePiece [numeric]
  * - availabileType [select]
  * - manufactureDate [date]
  * - releaseDate [date]
  * - whatIsInBox [manyToOneRelation]
->>>>>>> bed20856c1303b15490a97c54ef6e861ddfe6692:var/classes/objectbricks/salesInformation.php
  */
 
 return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
@@ -323,8 +314,6 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
              'dynamicOptions' => false,
              'defaultValueGenerator' => '',
           )),
-<<<<<<< HEAD:var/classes/objectbricks/SaleInformation.php
-=======
           3 => 
           Pimcore\Model\DataObject\ClassDefinition\Data\Date::__set_state(array(
              'name' => 'manufactureDate',
@@ -417,7 +406,6 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
             array (
             ),
           )),
->>>>>>> bed20856c1303b15490a97c54ef6e861ddfe6692:var/classes/objectbricks/salesInformation.php
         ),
          'locked' => false,
          'blockedVarsForExport' => 
