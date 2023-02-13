@@ -1,49 +1,19 @@
 <?php
 
 /**
- * Inheritance: yes
- * Variants: yes
- *
- * Fields Summary:
- * - Laptop_ID [input]
- * - LaptopBaseDetails [objectbricks]
- * - Sku [input]
- * - LaptopType [select]
- * - Category [manyToManyObjectRelation]
- * - Brand [manyToOneRelation]
- * - Media_L [imageGallery]
- * - LaptopMains [objectbricks]
- * - LaptopSpecs [objectbricks]
- * - ManufacturingDate [datetime]
- * - ReleaseDate [datetime]
- * - Delivery [manyToManyObjectRelation]
- * - Review [manyToOneRelation]
- */
+*/
 
-return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
+
+return Pimcore\Model\DataObject\ClassDefinition\CustomLayout::__set_state(array(
    'dao' => NULL,
-   'id' => 'Laptop',
-   'name' => 'Laptop',
+   'id' => '1',
+   'name' => 'DataEntry',
    'description' => '',
-   'creationDate' => 0,
-   'modificationDate' => 1676270437,
+   'creationDate' => 1676228193,
+   'modificationDate' => 1676228232,
    'userOwner' => 2,
-   'userModification' => 2,
-   'parentClass' => '',
-   'implementsInterfaces' => '',
-   'listingParentClass' => '',
-   'useTraits' => '',
-   'listingUseTraits' => '',
-   'encryption' => false,
-   'encryptedTables' => 
-  array (
-  ),
-   'allowInherit' => true,
-   'allowVariants' => true,
-   'showVariants' => true,
-   'fieldDefinitions' => 
-  array (
-  ),
+   'userModification' => 0,
+   'classId' => 'Laptop',
    'layoutDefinitions' => 
   Pimcore\Model\DataObject\ClassDefinition\Layout\Panel::__set_state(array(
      'name' => 'pimcore_root',
@@ -717,42 +687,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
      'labelWidth' => 100,
      'labelAlign' => 'left',
   )),
-   'icon' => 'data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAyMi4xLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iRWJlbmVfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHdpZHRoPSIyNHB4IiBoZWlnaHQ9IjI0cHgiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMjQgMjQiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPHBhdGggZmlsbD0ibm9uZSIgZD0iTTAsMGgyNHYyNEgwVjB6Ii8+DQo8cGF0aCBmaWxsPSIjQTNBNUE3IiBkPSJNMjAsMThjMS4xLDAsMi0wLjksMi0yVjVjMC0xLjEtMC45LTItMi0ySDRDMi45LDMsMiwzLjksMiw1djExYzAsMS4xLDAuOSwyLDIsMkgwYzAsMS4xLDAuOSwyLDIsMmgyMA0KCWMxLjEsMCwyLTAuOSwyLTJIMjB6Ii8+DQo8cmVjdCB4PSI0IiB5PSI1IiBmaWxsPSIjMEMwRjEyIiB3aWR0aD0iMTYiIGhlaWdodD0iMTEiLz4NCjxjaXJjbGUgZmlsbD0iIzBDMEYxMiIgY3g9IjEyIiBjeT0iMTgiIHI9IjEiLz4NCjwvc3ZnPg0K',
-   'previewUrl' => '',
-   'group' => 'Master Data',
-   'showAppLoggerTab' => false,
-   'linkGeneratorReference' => '',
-   'previewGeneratorReference' => '',
-   'compositeIndices' => 
-  array (
-  ),
-   'generateTypeDeclarations' => true,
-   'showFieldLookup' => false,
-   'propertyVisibility' => 
-  array (
-    'grid' => 
-    array (
-      'id' => true,
-      'key' => true,
-      'path' => true,
-      'published' => true,
-      'modificationDate' => true,
-      'creationDate' => true,
-    ),
-    'search' => 
-    array (
-      'id' => true,
-      'key' => false,
-      'path' => true,
-      'published' => true,
-      'modificationDate' => true,
-      'creationDate' => true,
-    ),
-  ),
-   'enableGridLocking' => true,
-   'deletedDataComponents' => 
-  array (
-  ),
+   'default' => 0,
    'blockedVarsForExport' => 
   array (
   ),
