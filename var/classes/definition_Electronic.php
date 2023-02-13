@@ -9,17 +9,19 @@
  * -- name [input]
  * -- description [wysiwyg]
  * - modelNumber [input]
+ * - modelNumber [input]
  * - manufacturer [manyToOneRelation]
  * - electronicType [select]
  * - color [select]
  * - country [country]
  * - category [manyToManyObjectRelation]
  * - Brand [manyToOneRelation]
- * - imageGallary [imageGallery]
+ * - image [image]
  * - genericImage [imageGallery]
  * - Specifications [objectbricks]
  * - image [image]
  * - genericImage [imageGallery]
+ * - attributes [objectbricks]
  * - attributes [objectbricks]
  * - saleInformation [objectbricks]
  * - location [geopoint]
@@ -36,6 +38,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
 
    'modificationDate' => 1676216777,
 
+   'modificationDate' => 1676207403,
    'modificationDate' => 1676207403,
    'userOwner' => 2,
    'userModification' => 2,
