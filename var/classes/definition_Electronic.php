@@ -8,15 +8,22 @@
  * - localizedfields [localizedfields]
  * -- name [input]
  * -- description [wysiwyg]
+ * - modelNumber [input]
  * - manufacturer [manyToOneRelation]
  * - electronicType [select]
  * - color [select]
  * - country [country]
  * - category [manyToManyObjectRelation]
+<<<<<<< HEAD
  * - Brand [manyToOneRelation]
  * - imageGallary [imageGallery]
  * - genericImage [imageGallery]
  * - Specifications [objectbricks]
+=======
+ * - image [image]
+ * - genericImage [imageGallery]
+ * - attributes [objectbricks]
+>>>>>>> bed20856c1303b15490a97c54ef6e861ddfe6692
  * - saleInformation [objectbricks]
  * - location [geopoint]
  * - objectType [select]
@@ -29,7 +36,11 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
    'name' => 'Electronic',
    'description' => '',
    'creationDate' => 0,
+<<<<<<< HEAD
    'modificationDate' => 1676216777,
+=======
+   'modificationDate' => 1676207403,
+>>>>>>> bed20856c1303b15490a97c54ef6e861ddfe6692
    'userOwner' => 2,
    'userModification' => 2,
    'parentClass' => '',
@@ -191,6 +202,37 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'labelAlign' => 'left',
               )),
               1 => 
+              Pimcore\Model\DataObject\ClassDefinition\Data\Input::__set_state(array(
+                 'name' => 'modelNumber',
+                 'title' => 'Model Number',
+                 'tooltip' => '',
+                 'mandatory' => false,
+                 'noteditable' => false,
+                 'index' => false,
+                 'locked' => false,
+                 'style' => '',
+                 'permissions' => NULL,
+                 'datatype' => 'data',
+                 'fieldtype' => 'input',
+                 'relationType' => false,
+                 'invisible' => false,
+                 'visibleGridView' => false,
+                 'visibleSearch' => false,
+                 'blockedVarsForExport' => 
+                array (
+                ),
+                 'width' => '',
+                 'defaultValue' => NULL,
+                 'columnLength' => 190,
+                 'regex' => '',
+                 'regexFlags' => 
+                array (
+                ),
+                 'unique' => false,
+                 'showCharCount' => false,
+                 'defaultValueGenerator' => '',
+              )),
+              2 => 
               Pimcore\Model\DataObject\ClassDefinition\Data\ManyToOneRelation::__set_state(array(
                  'name' => 'manufacturer',
                  'title' => 'Manufacturer',
@@ -230,7 +272,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                 array (
                 ),
               )),
-              2 => 
+              3 => 
               Pimcore\Model\DataObject\ClassDefinition\Data\Select::__set_state(array(
                  'name' => 'electronicType',
                  'title' => 'Electronic Type',
@@ -281,7 +323,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'dynamicOptions' => false,
                  'defaultValueGenerator' => '',
               )),
-              3 => 
+              4 => 
               Pimcore\Model\DataObject\ClassDefinition\Data\Select::__set_state(array(
                  'name' => 'color',
                  'title' => 'Color',
@@ -342,7 +384,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'dynamicOptions' => false,
                  'defaultValueGenerator' => '',
               )),
-              4 => 
+              5 => 
               Pimcore\Model\DataObject\ClassDefinition\Data\Country::__set_state(array(
                  'name' => 'country',
                  'title' => 'Country',
@@ -371,7 +413,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'defaultValueGenerator' => '',
                  'restrictTo' => '',
               )),
-              5 => 
+              6 => 
               Pimcore\Model\DataObject\ClassDefinition\Data\ManyToManyObjectRelation::__set_state(array(
                  'name' => 'category',
                  'title' => 'Category',
@@ -478,9 +520,9 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
              'children' => 
             array (
               0 => 
-              Pimcore\Model\DataObject\ClassDefinition\Data\ImageGallery::__set_state(array(
-                 'name' => 'imageGallary',
-                 'title' => 'Image Gallary',
+              Pimcore\Model\DataObject\ClassDefinition\Data\Image::__set_state(array(
+                 'name' => 'image',
+                 'title' => 'Image',
                  'tooltip' => '',
                  'mandatory' => false,
                  'noteditable' => false,
@@ -489,7 +531,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'style' => '',
                  'permissions' => NULL,
                  'datatype' => 'data',
-                 'fieldtype' => 'imageGallery',
+                 'fieldtype' => 'image',
                  'relationType' => false,
                  'invisible' => false,
                  'visibleGridView' => false,
@@ -500,9 +542,6 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'width' => 300,
                  'height' => 300,
                  'uploadPath' => '',
-                 'ratioX' => NULL,
-                 'ratioY' => NULL,
-                 'predefinedDataTemplates' => '',
               )),
               1 => 
               Pimcore\Model\DataObject\ClassDefinition\Data\ImageGallery::__set_state(array(
@@ -560,8 +599,13 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
             array (
               0 => 
               Pimcore\Model\DataObject\ClassDefinition\Data\Objectbricks::__set_state(array(
+<<<<<<< HEAD
                  'name' => 'Specifications',
                  'title' => '',
+=======
+                 'name' => 'attributes',
+                 'title' => 'Attributes',
+>>>>>>> bed20856c1303b15490a97c54ef6e861ddfe6692
                  'tooltip' => '',
                  'mandatory' => false,
                  'noteditable' => false,
@@ -580,7 +624,24 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                 ),
                  'allowedTypes' => 
                 array (
+<<<<<<< HEAD
                   0 => 'SpecificationSpeaker',
+=======
+                  0 => 'CellularTechnology',
+                  1 => 'CameraDescription',
+                  2 => 'ScreenSize',
+                  3 => 'Processor',
+                  4 => 'BatteryPowerInmaH',
+                  5 => 'RAM',
+                  6 => 'OperatingSystem',
+                  7 => 'itemWeight',
+                  8 => 'itemDimension',
+                  9 => 'screenResolution',
+                  10 => 'inBuildStorage',
+                  11 => 'warrentyDetails',
+                  12 => 'portAndConnectivity',
+                  13 => 'graphicCard',
+>>>>>>> bed20856c1303b15490a97c54ef6e861ddfe6692
                 ),
                  'maxItems' => NULL,
                  'border' => false,
@@ -895,6 +956,46 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
    'enableGridLocking' => false,
    'deletedDataComponents' => 
   array (
+<<<<<<< HEAD
+=======
+    0 => 
+    Pimcore\Model\DataObject\ClassDefinition\Data\ImageGallery::__set_state(array(
+       'name' => 'imageGallary',
+       'title' => 'Image Gallary',
+       'tooltip' => '',
+       'mandatory' => false,
+       'noteditable' => false,
+       'index' => false,
+       'locked' => false,
+       'style' => '',
+       'permissions' => NULL,
+       'datatype' => 'data',
+       'fieldtype' => 'imageGallery',
+       'relationType' => false,
+       'invisible' => false,
+       'visibleGridView' => false,
+       'visibleSearch' => false,
+       'blockedVarsForExport' => 
+      array (
+      ),
+       'queryColumnType' => 
+      array (
+        'images' => 'text',
+        'hotspots' => 'longtext',
+      ),
+       'columnType' => 
+      array (
+        'images' => 'text',
+        'hotspots' => 'longtext',
+      ),
+       'width' => 300,
+       'height' => 300,
+       'uploadPath' => '',
+       'ratioX' => NULL,
+       'ratioY' => NULL,
+       'predefinedDataTemplates' => '',
+    )),
+>>>>>>> bed20856c1303b15490a97c54ef6e861ddfe6692
   ),
    'blockedVarsForExport' => 
   array (

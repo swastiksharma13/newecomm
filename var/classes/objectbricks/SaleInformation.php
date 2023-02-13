@@ -2,12 +2,21 @@
 
 /**
  * Fields Summary:
+<<<<<<< HEAD:var/classes/objectbricks/SaleInformation.php
  * - price [numeric]
  * - location [geobounds]
  * - princeInINR [calculatedValue]
  * - ConditionType [select]
  * - AvailabilityPieces [numeric]
  * - AvailabilityTime [select]
+=======
+ * - priceInINR [numeric]
+ * - availablePiece [numeric]
+ * - availabileType [select]
+ * - manufactureDate [date]
+ * - releaseDate [date]
+ * - whatIsInBox [manyToOneRelation]
+>>>>>>> bed20856c1303b15490a97c54ef6e861ddfe6692:var/classes/objectbricks/salesInformation.php
  */
 
 return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
@@ -314,6 +323,101 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
              'dynamicOptions' => false,
              'defaultValueGenerator' => '',
           )),
+<<<<<<< HEAD:var/classes/objectbricks/SaleInformation.php
+=======
+          3 => 
+          Pimcore\Model\DataObject\ClassDefinition\Data\Date::__set_state(array(
+             'name' => 'manufactureDate',
+             'title' => 'Manufacture Date',
+             'tooltip' => '',
+             'mandatory' => false,
+             'noteditable' => false,
+             'index' => false,
+             'locked' => false,
+             'style' => '',
+             'permissions' => NULL,
+             'datatype' => 'data',
+             'fieldtype' => 'date',
+             'relationType' => false,
+             'invisible' => false,
+             'visibleGridView' => false,
+             'visibleSearch' => false,
+             'blockedVarsForExport' => 
+            array (
+            ),
+             'queryColumnType' => 'bigint(20)',
+             'columnType' => 'bigint(20)',
+             'defaultValue' => NULL,
+             'useCurrentDate' => false,
+             'defaultValueGenerator' => '',
+          )),
+          4 => 
+          Pimcore\Model\DataObject\ClassDefinition\Data\Date::__set_state(array(
+             'name' => 'releaseDate',
+             'title' => 'Release Date',
+             'tooltip' => '',
+             'mandatory' => false,
+             'noteditable' => false,
+             'index' => false,
+             'locked' => false,
+             'style' => '',
+             'permissions' => NULL,
+             'datatype' => 'data',
+             'fieldtype' => 'date',
+             'relationType' => false,
+             'invisible' => false,
+             'visibleGridView' => false,
+             'visibleSearch' => false,
+             'blockedVarsForExport' => 
+            array (
+            ),
+             'queryColumnType' => 'bigint(20)',
+             'columnType' => 'bigint(20)',
+             'defaultValue' => NULL,
+             'useCurrentDate' => false,
+             'defaultValueGenerator' => '',
+          )),
+          5 => 
+          Pimcore\Model\DataObject\ClassDefinition\Data\ManyToOneRelation::__set_state(array(
+             'name' => 'whatIsInBox',
+             'title' => 'What Is In Box',
+             'tooltip' => '',
+             'mandatory' => false,
+             'noteditable' => false,
+             'index' => false,
+             'locked' => false,
+             'style' => '',
+             'permissions' => NULL,
+             'datatype' => 'data',
+             'fieldtype' => 'manyToOneRelation',
+             'relationType' => true,
+             'invisible' => false,
+             'visibleGridView' => false,
+             'visibleSearch' => false,
+             'blockedVarsForExport' => 
+            array (
+            ),
+             'classes' => 
+            array (
+              0 => 
+              array (
+                'classes' => 'WhatIsInBox',
+              ),
+            ),
+             'pathFormatterClass' => '',
+             'width' => '',
+             'assetUploadPath' => '',
+             'objectsAllowed' => true,
+             'assetsAllowed' => false,
+             'assetTypes' => 
+            array (
+            ),
+             'documentsAllowed' => false,
+             'documentTypes' => 
+            array (
+            ),
+          )),
+>>>>>>> bed20856c1303b15490a97c54ef6e861ddfe6692:var/classes/objectbricks/salesInformation.php
         ),
          'locked' => false,
          'blockedVarsForExport' => 
@@ -323,7 +427,7 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
          'layout' => NULL,
          'border' => false,
          'icon' => '',
-         'labelWidth' => 0,
+         'labelWidth' => 100,
          'labelAlign' => 'left',
       )),
     ),

@@ -8,10 +8,17 @@
 return Pimcore\Model\DataObject\ClassDefinition\CustomLayout::__set_state(array(
    'dao' => NULL,
    'id' => '1',
+<<<<<<< HEAD
    'name' => 'DataEntry',
    'description' => '',
    'creationDate' => 1676026716,
    'modificationDate' => 1676026904,
+=======
+   'name' => 'media',
+   'description' => 'Media person can update media',
+   'creationDate' => 1675968272,
+   'modificationDate' => 1676207404,
+>>>>>>> bed20856c1303b15490a97c54ef6e861ddfe6692
    'userOwner' => 2,
    'userModification' => 0,
    'classId' => 'electronic',
@@ -46,6 +53,7 @@ return Pimcore\Model\DataObject\ClassDefinition\CustomLayout::__set_state(array(
          'children' => 
         array (
           0 => 
+<<<<<<< HEAD
           Pimcore\Model\DataObject\ClassDefinition\Layout\Panel::__set_state(array(
              'name' => 'Base Data',
              'type' => NULL,
@@ -403,6 +411,17 @@ return Pimcore\Model\DataObject\ClassDefinition\CustomLayout::__set_state(array(
              'collapsed' => false,
              'bodyStyle' => '',
              'datatype' => 'layout',
+=======
+          Pimcore\Model\DataObject\ClassDefinition\Data\ImageGallery::__set_state(array(
+             'name' => 'genericImage',
+             'title' => 'Generic Image',
+             'tooltip' => '',
+             'mandatory' => false,
+             'noteditable' => false,
+             'index' => false,
+             'locked' => false,
+             'style' => '',
+>>>>>>> bed20856c1303b15490a97c54ef6e861ddfe6692
              'permissions' => NULL,
              'children' => 
             array (
