@@ -11,7 +11,7 @@ return Pimcore\Model\DataObject\ClassDefinition\CustomLayout::__set_state(array(
    'name' => 'dataEntry',
    'description' => 'Data Entry can enrich the data',
    'creationDate' => 1676012846,
-   'modificationDate' => 1676026037,
+   'modificationDate' => 1676207404,
    'userOwner' => 2,
    'userModification' => 0,
    'classId' => 'electronic',
@@ -407,33 +407,6 @@ return Pimcore\Model\DataObject\ClassDefinition\CustomLayout::__set_state(array(
              'children' => 
             array (
               0 => 
-              Pimcore\Model\DataObject\ClassDefinition\Data\ImageGallery::__set_state(array(
-                 'name' => 'imageGallary',
-                 'title' => 'Image Gallary',
-                 'tooltip' => '',
-                 'mandatory' => false,
-                 'noteditable' => false,
-                 'index' => false,
-                 'locked' => false,
-                 'style' => '',
-                 'permissions' => NULL,
-                 'datatype' => 'data',
-                 'fieldtype' => 'imageGallery',
-                 'relationType' => false,
-                 'invisible' => false,
-                 'visibleGridView' => false,
-                 'visibleSearch' => false,
-                 'blockedVarsForExport' => 
-                array (
-                ),
-                 'width' => 300,
-                 'height' => 300,
-                 'uploadPath' => '',
-                 'ratioX' => NULL,
-                 'ratioY' => NULL,
-                 'predefinedDataTemplates' => '',
-              )),
-              1 => 
               Pimcore\Model\DataObject\ClassDefinition\Data\ImageGallery::__set_state(array(
                  'name' => 'genericImage',
                  'title' => 'Generic Image',

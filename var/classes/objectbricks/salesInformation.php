@@ -7,7 +7,7 @@
  * - availabileType [select]
  * - manufactureDate [date]
  * - releaseDate [date]
- * - supplier [manyToOneRelation]
+ * - whatIsInBox [manyToOneRelation]
  */
 
 return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
@@ -209,8 +209,8 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
           )),
           5 => 
           Pimcore\Model\DataObject\ClassDefinition\Data\ManyToOneRelation::__set_state(array(
-             'name' => 'supplier',
-             'title' => 'Supplier',
+             'name' => 'whatIsInBox',
+             'title' => 'What Is In Box',
              'tooltip' => '',
              'mandatory' => false,
              'noteditable' => false,
@@ -229,11 +229,15 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
             ),
              'classes' => 
             array (
+              0 => 
+              array (
+                'classes' => 'WhatIsInBox',
+              ),
             ),
              'pathFormatterClass' => '',
              'width' => '',
              'assetUploadPath' => '',
-             'objectsAllowed' => false,
+             'objectsAllowed' => true,
              'assetsAllowed' => false,
              'assetTypes' => 
             array (
@@ -252,7 +256,7 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
          'layout' => NULL,
          'border' => false,
          'icon' => '',
-         'labelWidth' => 0,
+         'labelWidth' => 100,
          'labelAlign' => 'left',
       )),
     ),

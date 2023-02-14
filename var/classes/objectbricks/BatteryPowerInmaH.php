@@ -1,23 +1,20 @@
 <?php
 
 /**
-* Media person can update media
-*/
+ * Fields Summary:
+ * - batteryPoewerInmah [input]
+ */
 
-
-return Pimcore\Model\DataObject\ClassDefinition\CustomLayout::__set_state(array(
+return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
    'dao' => NULL,
-   'id' => '1',
-   'name' => 'media',
-   'description' => 'Media person can update media',
-   'creationDate' => 1675968272,
-   'modificationDate' => 1676207404,
-   'userOwner' => 2,
-   'userModification' => 0,
-   'classId' => 'electronic',
+   'key' => 'BatteryPowerInmaH',
+   'parentClass' => '',
+   'implementsInterfaces' => '',
+   'title' => '',
+   'group' => '',
    'layoutDefinitions' => 
   Pimcore\Model\DataObject\ClassDefinition\Layout\Panel::__set_state(array(
-     'name' => 'pimcore_root',
+     'name' => NULL,
      'type' => NULL,
      'region' => NULL,
      'title' => NULL,
@@ -32,10 +29,10 @@ return Pimcore\Model\DataObject\ClassDefinition\CustomLayout::__set_state(array(
     array (
       0 => 
       Pimcore\Model\DataObject\ClassDefinition\Layout\Panel::__set_state(array(
-         'name' => 'Media',
+         'name' => 'Battery In mah',
          'type' => NULL,
          'region' => NULL,
-         'title' => 'Media',
+         'title' => 'Battery In mah',
          'width' => '',
          'height' => '',
          'collapsible' => false,
@@ -46,9 +43,9 @@ return Pimcore\Model\DataObject\ClassDefinition\CustomLayout::__set_state(array(
          'children' => 
         array (
           0 => 
-          Pimcore\Model\DataObject\ClassDefinition\Data\ImageGallery::__set_state(array(
-             'name' => 'genericImage',
-             'title' => 'Generic Image',
+          Pimcore\Model\DataObject\ClassDefinition\Data\Input::__set_state(array(
+             'name' => 'batteryPoewerInmah',
+             'title' => 'Battery Poewer Inmah',
              'tooltip' => '',
              'mandatory' => false,
              'noteditable' => false,
@@ -57,7 +54,7 @@ return Pimcore\Model\DataObject\ClassDefinition\CustomLayout::__set_state(array(
              'style' => '',
              'permissions' => NULL,
              'datatype' => 'data',
-             'fieldtype' => 'imageGallery',
+             'fieldtype' => 'input',
              'relationType' => false,
              'invisible' => false,
              'visibleGridView' => false,
@@ -65,12 +62,16 @@ return Pimcore\Model\DataObject\ClassDefinition\CustomLayout::__set_state(array(
              'blockedVarsForExport' => 
             array (
             ),
-             'width' => 300,
-             'height' => 300,
-             'uploadPath' => '',
-             'ratioX' => NULL,
-             'ratioY' => NULL,
-             'predefinedDataTemplates' => '',
+             'width' => '',
+             'defaultValue' => NULL,
+             'columnLength' => 190,
+             'regex' => '',
+             'regexFlags' => 
+            array (
+            ),
+             'unique' => false,
+             'showCharCount' => false,
+             'defaultValueGenerator' => '',
           )),
         ),
          'locked' => false,
@@ -96,11 +97,16 @@ return Pimcore\Model\DataObject\ClassDefinition\CustomLayout::__set_state(array(
      'labelWidth' => 100,
      'labelAlign' => 'left',
   )),
-   'default' => 0,
+   'generateTypeDeclarations' => true,
    'blockedVarsForExport' => 
   array (
   ),
-   'activeDispatchingEvents' => 
+   'classDefinitions' => 
   array (
+    0 => 
+    array (
+      'classname' => 'Electronic',
+      'fieldname' => 'attributes',
+    ),
   ),
 ));
