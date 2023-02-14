@@ -749,7 +749,7 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
     0 => 
     array (
       'classname' => 'Electronic',
-      'fieldname' => 'Specifications',
+      'fieldname' => 'attributes',
     ),
   ),
 ));
