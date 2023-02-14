@@ -10,7 +10,11 @@ return Pimcore\Model\DataObject\ClassDefinition\CustomLayout::__set_state(array(
    'name' => 'DataEntry',
    'description' => '',
    'creationDate' => 1676026716,
-   'modificationDate' => 1676283372,
+   'modificationDate' => 1676026904,
+   'name' => 'media',
+   'description' => 'Media person can update media',
+   'creationDate' => 1675968272,
+   'modificationDate' => 1676207404,
    'userOwner' => 2,
    'userModification' => 0,
    'classId' => 'electronic',
@@ -916,4 +920,5 @@ return Pimcore\Model\DataObject\ClassDefinition\CustomLayout::__set_state(array(
    'activeDispatchingEvents' => 
   array (
   ),
-));
+)
+);

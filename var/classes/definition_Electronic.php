@@ -9,14 +9,19 @@
  * -- name [input]
  * -- description [wysiwyg]
  * - modelNumber [input]
+ * - modelNumber [input]
  * - manufacturer [manyToOneRelation]
  * - electronicType [select]
  * - color [select]
  * - country [country]
- * - Brand [manyToManyObjectRelation]
- * - Category [manyToManyObjectRelation]
+ * - category [manyToManyObjectRelation]
+ * - Brand [manyToOneRelation]
  * - image [image]
  * - genericImage [imageGallery]
+ * - Specifications [objectbricks]
+ * - image [image]
+ * - genericImage [imageGallery]
+ * - attributes [objectbricks]
  * - attributes [objectbricks]
  * - saleInformation [objectbricks]
  * - location [geopoint]
@@ -32,7 +37,11 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
    'name' => 'Electronic',
    'description' => '',
    'creationDate' => 0,
-   'modificationDate' => 1676360986,
+
+   'modificationDate' => 1676216777,
+
+   'modificationDate' => 1676207403,
+   'modificationDate' => 1676207403,
    'userOwner' => 2,
    'userModification' => 2,
    'parentClass' => '',
@@ -1020,6 +1029,43 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
    'enableGridLocking' => false,
    'deletedDataComponents' => 
   array (
+    0 => 
+    Pimcore\Model\DataObject\ClassDefinition\Data\ImageGallery::__set_state(array(
+       'name' => 'imageGallary',
+       'title' => 'Image Gallary',
+       'tooltip' => '',
+       'mandatory' => false,
+       'noteditable' => false,
+       'index' => false,
+       'locked' => false,
+       'style' => '',
+       'permissions' => NULL,
+       'datatype' => 'data',
+       'fieldtype' => 'imageGallery',
+       'relationType' => false,
+       'invisible' => false,
+       'visibleGridView' => false,
+       'visibleSearch' => false,
+       'blockedVarsForExport' => 
+      array (
+      ),
+       'queryColumnType' => 
+      array (
+        'images' => 'text',
+        'hotspots' => 'longtext',
+      ),
+       'columnType' => 
+      array (
+        'images' => 'text',
+        'hotspots' => 'longtext',
+      ),
+       'width' => 300,
+       'height' => 300,
+       'uploadPath' => '',
+       'ratioX' => NULL,
+       'ratioY' => NULL,
+       'predefinedDataTemplates' => '',
+    )),
   ),
    'blockedVarsForExport' => 
   array (
@@ -1027,4 +1073,5 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
    'activeDispatchingEvents' => 
   array (
   ),
-));
+)
+);
