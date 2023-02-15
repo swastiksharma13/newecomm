@@ -1,17 +1,16 @@
 <?php
 
 /**
-* Data Entry can enrich the data
 */
 
 
 return Pimcore\Model\DataObject\ClassDefinition\CustomLayout::__set_state(array(
    'dao' => NULL,
    'id' => '2',
-   'name' => 'dataEntry',
-   'description' => 'Data Entry can enrich the data',
-   'creationDate' => 1676012846,
-   'modificationDate' => 1676207404,
+   'name' => 'dataentry1',
+   'description' => '',
+   'creationDate' => 1676274360,
+   'modificationDate' => 1676274434,
    'userOwner' => 2,
    'userModification' => 0,
    'classId' => 'electronic',
@@ -159,6 +158,37 @@ return Pimcore\Model\DataObject\ClassDefinition\CustomLayout::__set_state(array(
                  'labelAlign' => 'left',
               )),
               1 => 
+              Pimcore\Model\DataObject\ClassDefinition\Data\Input::__set_state(array(
+                 'name' => 'modelNumber',
+                 'title' => 'Model Number',
+                 'tooltip' => '',
+                 'mandatory' => false,
+                 'noteditable' => false,
+                 'index' => false,
+                 'locked' => false,
+                 'style' => '',
+                 'permissions' => NULL,
+                 'datatype' => 'data',
+                 'fieldtype' => 'input',
+                 'relationType' => false,
+                 'invisible' => false,
+                 'visibleGridView' => false,
+                 'visibleSearch' => false,
+                 'blockedVarsForExport' => 
+                array (
+                ),
+                 'width' => '',
+                 'defaultValue' => NULL,
+                 'columnLength' => 190,
+                 'regex' => '',
+                 'regexFlags' => 
+                array (
+                ),
+                 'unique' => false,
+                 'showCharCount' => false,
+                 'defaultValueGenerator' => '',
+              )),
+              2 => 
               Pimcore\Model\DataObject\ClassDefinition\Data\ManyToOneRelation::__set_state(array(
                  'name' => 'manufacturer',
                  'title' => 'Manufacturer',
@@ -198,7 +228,7 @@ return Pimcore\Model\DataObject\ClassDefinition\CustomLayout::__set_state(array(
                 array (
                 ),
               )),
-              2 => 
+              3 => 
               Pimcore\Model\DataObject\ClassDefinition\Data\Select::__set_state(array(
                  'name' => 'electronicType',
                  'title' => 'Electronic Type',
@@ -249,7 +279,7 @@ return Pimcore\Model\DataObject\ClassDefinition\CustomLayout::__set_state(array(
                  'dynamicOptions' => false,
                  'defaultValueGenerator' => '',
               )),
-              3 => 
+              4 => 
               Pimcore\Model\DataObject\ClassDefinition\Data\Select::__set_state(array(
                  'name' => 'color',
                  'title' => 'Color',
@@ -310,7 +340,7 @@ return Pimcore\Model\DataObject\ClassDefinition\CustomLayout::__set_state(array(
                  'dynamicOptions' => false,
                  'defaultValueGenerator' => '',
               )),
-              4 => 
+              5 => 
               Pimcore\Model\DataObject\ClassDefinition\Data\Country::__set_state(array(
                  'name' => 'country',
                  'title' => 'Country',
@@ -340,7 +370,7 @@ return Pimcore\Model\DataObject\ClassDefinition\CustomLayout::__set_state(array(
                  'defaultValueGenerator' => '',
                  'restrictTo' => '',
               )),
-              5 => 
+              6 => 
               Pimcore\Model\DataObject\ClassDefinition\Data\ManyToManyObjectRelation::__set_state(array(
                  'name' => 'category',
                  'title' => 'Category',
@@ -407,6 +437,30 @@ return Pimcore\Model\DataObject\ClassDefinition\CustomLayout::__set_state(array(
              'children' => 
             array (
               0 => 
+              Pimcore\Model\DataObject\ClassDefinition\Data\Image::__set_state(array(
+                 'name' => 'image',
+                 'title' => 'Image',
+                 'tooltip' => '',
+                 'mandatory' => false,
+                 'noteditable' => false,
+                 'index' => false,
+                 'locked' => false,
+                 'style' => '',
+                 'permissions' => NULL,
+                 'datatype' => 'data',
+                 'fieldtype' => 'image',
+                 'relationType' => false,
+                 'invisible' => false,
+                 'visibleGridView' => false,
+                 'visibleSearch' => false,
+                 'blockedVarsForExport' => 
+                array (
+                ),
+                 'width' => 300,
+                 'height' => 300,
+                 'uploadPath' => '',
+              )),
+              1 => 
               Pimcore\Model\DataObject\ClassDefinition\Data\ImageGallery::__set_state(array(
                  'name' => 'genericImage',
                  'title' => 'Generic Image',
@@ -460,6 +514,41 @@ return Pimcore\Model\DataObject\ClassDefinition\CustomLayout::__set_state(array(
              'permissions' => NULL,
              'children' => 
             array (
+              0 => 
+              Pimcore\Model\DataObject\ClassDefinition\Data\Objectbricks::__set_state(array(
+                 'name' => 'attributes',
+                 'title' => 'Attributes',
+                 'tooltip' => '',
+                 'mandatory' => false,
+                 'noteditable' => false,
+                 'index' => false,
+                 'locked' => false,
+                 'style' => '',
+                 'permissions' => NULL,
+                 'datatype' => 'data',
+                 'fieldtype' => 'objectbricks',
+                 'relationType' => false,
+                 'invisible' => false,
+                 'visibleGridView' => false,
+                 'visibleSearch' => false,
+                 'blockedVarsForExport' => 
+                array (
+                ),
+                 'allowedTypes' => 
+                array (
+                  0 => 'CameraDescription',
+                  1 => 'ScreenSize',
+                  2 => 'Processor',
+                  3 => 'RAM',
+                  4 => 'OperatingSystem',
+                  5 => 'screenResolution',
+                  6 => 'inBuildStorage',
+                  7 => 'graphicCard',
+                  8 => 'cellularTechnology',
+                ),
+                 'maxItems' => NULL,
+                 'border' => false,
+              )),
             ),
              'locked' => false,
              'blockedVarsForExport' => 
@@ -509,6 +598,7 @@ return Pimcore\Model\DataObject\ClassDefinition\CustomLayout::__set_state(array(
                 ),
                  'allowedTypes' => 
                 array (
+                  0 => 'salesInformation',
                 ),
                  'maxItems' => NULL,
                  'border' => false,

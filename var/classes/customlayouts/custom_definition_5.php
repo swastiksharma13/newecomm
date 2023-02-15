@@ -1,52 +1,19 @@
 <?php
 
 /**
- * Inheritance: yes
- * Variants: yes
- *
- * Fields Summary:
- * - localizedfields [localizedfields]
- * -- name [input]
- * -- description [wysiwyg]
- * - modelNumber [input]
- * - manufacturer [manyToOneRelation]
- * - electronicType [select]
- * - color [select]
- * - country [country]
- * - category [manyToManyObjectRelation]
- * - image [image]
- * - genericImage [imageGallery]
- * - attributes [objectbricks]
- * - saleInformation [objectbricks]
- * - location [geopoint]
- * - objectType [select]
- * - review [manyToOneRelation]
- */
+*/
 
-return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
+
+return Pimcore\Model\DataObject\ClassDefinition\CustomLayout::__set_state(array(
    'dao' => NULL,
-   'id' => 'electronic',
-   'name' => 'Electronic',
+   'id' => '5',
+   'name' => 'mediarole2',
    'description' => '',
-   'creationDate' => 0,
-   'modificationDate' => 1676272993,
+   'creationDate' => 1676274815,
+   'modificationDate' => 1676274841,
    'userOwner' => 2,
-   'userModification' => 2,
-   'parentClass' => '',
-   'implementsInterfaces' => '',
-   'listingParentClass' => '',
-   'useTraits' => '',
-   'listingUseTraits' => '',
-   'encryption' => false,
-   'encryptedTables' => 
-  array (
-  ),
-   'allowInherit' => true,
-   'allowVariants' => true,
-   'showVariants' => true,
-   'fieldDefinitions' => 
-  array (
-  ),
+   'userModification' => 0,
+   'classId' => 'electronic',
    'layoutDefinitions' => 
   Pimcore\Model\DataObject\ClassDefinition\Layout\Panel::__set_state(array(
      'name' => 'pimcore_root',
@@ -120,7 +87,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                      'title' => 'Name',
                      'tooltip' => '',
                      'mandatory' => false,
-                     'noteditable' => false,
+                     'noteditable' => true,
                      'index' => false,
                      'locked' => false,
                      'style' => '',
@@ -151,7 +118,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                      'title' => 'Description',
                      'tooltip' => '',
                      'mandatory' => false,
-                     'noteditable' => false,
+                     'noteditable' => true,
                      'index' => false,
                      'locked' => false,
                      'style' => '',
@@ -196,7 +163,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'title' => 'Model Number',
                  'tooltip' => '',
                  'mandatory' => false,
-                 'noteditable' => false,
+                 'noteditable' => true,
                  'index' => false,
                  'locked' => false,
                  'style' => '',
@@ -227,7 +194,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'title' => 'Manufacturer',
                  'tooltip' => '',
                  'mandatory' => false,
-                 'noteditable' => false,
+                 'noteditable' => true,
                  'index' => false,
                  'locked' => false,
                  'style' => '',
@@ -267,7 +234,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'title' => 'Electronic Type',
                  'tooltip' => '',
                  'mandatory' => false,
-                 'noteditable' => false,
+                 'noteditable' => true,
                  'index' => false,
                  'locked' => false,
                  'style' => '',
@@ -318,7 +285,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'title' => 'Color',
                  'tooltip' => '',
                  'mandatory' => false,
-                 'noteditable' => false,
+                 'noteditable' => true,
                  'index' => false,
                  'locked' => false,
                  'style' => '',
@@ -379,7 +346,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'title' => 'Country',
                  'tooltip' => '',
                  'mandatory' => false,
-                 'noteditable' => false,
+                 'noteditable' => true,
                  'index' => false,
                  'locked' => false,
                  'style' => '',
@@ -393,6 +360,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'blockedVarsForExport' => 
                 array (
                 ),
+                 'options' => NULL,
                  'width' => '',
                  'defaultValue' => NULL,
                  'optionsProviderClass' => NULL,
@@ -408,7 +376,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'title' => 'Category',
                  'tooltip' => '',
                  'mandatory' => false,
-                 'noteditable' => false,
+                 'noteditable' => true,
                  'index' => false,
                  'locked' => false,
                  'style' => '',
@@ -474,7 +442,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'title' => 'Image',
                  'tooltip' => '',
                  'mandatory' => false,
-                 'noteditable' => false,
+                 'noteditable' => true,
                  'index' => false,
                  'locked' => false,
                  'style' => '',
@@ -498,7 +466,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'title' => 'Generic Image',
                  'tooltip' => '',
                  'mandatory' => false,
-                 'noteditable' => false,
+                 'noteditable' => true,
                  'index' => false,
                  'locked' => false,
                  'style' => '',
@@ -552,7 +520,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'title' => 'Attributes',
                  'tooltip' => '',
                  'mandatory' => false,
-                 'noteditable' => false,
+                 'noteditable' => true,
                  'index' => false,
                  'locked' => false,
                  'style' => '',
@@ -614,7 +582,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'title' => 'Sale Information',
                  'tooltip' => '',
                  'mandatory' => false,
-                 'noteditable' => false,
+                 'noteditable' => true,
                  'index' => false,
                  'locked' => false,
                  'style' => '',
@@ -641,7 +609,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'title' => 'Location',
                  'tooltip' => '',
                  'mandatory' => false,
-                 'noteditable' => false,
+                 'noteditable' => true,
                  'index' => false,
                  'locked' => false,
                  'style' => '',
@@ -721,7 +689,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'title' => 'Object Type',
                  'tooltip' => '',
                  'mandatory' => false,
-                 'noteditable' => false,
+                 'noteditable' => true,
                  'index' => false,
                  'locked' => false,
                  'style' => '',
@@ -789,7 +757,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'title' => 'Review',
                  'tooltip' => '',
                  'mandatory' => false,
-                 'noteditable' => false,
+                 'noteditable' => true,
                  'index' => false,
                  'locked' => false,
                  'style' => '',
@@ -856,42 +824,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
      'labelWidth' => 100,
      'labelAlign' => 'left',
   )),
-   'icon' => '',
-   'previewUrl' => '',
-   'group' => 'Product Data',
-   'showAppLoggerTab' => false,
-   'linkGeneratorReference' => '',
-   'previewGeneratorReference' => '',
-   'compositeIndices' => 
-  array (
-  ),
-   'generateTypeDeclarations' => true,
-   'showFieldLookup' => false,
-   'propertyVisibility' => 
-  array (
-    'grid' => 
-    array (
-      'id' => true,
-      'key' => false,
-      'path' => true,
-      'published' => true,
-      'modificationDate' => true,
-      'creationDate' => true,
-    ),
-    'search' => 
-    array (
-      'id' => true,
-      'key' => false,
-      'path' => true,
-      'published' => true,
-      'modificationDate' => true,
-      'creationDate' => true,
-    ),
-  ),
-   'enableGridLocking' => false,
-   'deletedDataComponents' => 
-  array (
-  ),
+   'default' => 0,
    'blockedVarsForExport' => 
   array (
   ),

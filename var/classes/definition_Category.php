@@ -1,8 +1,8 @@
 <?php
 
 /**
- * Inheritance: no
- * Variants: no
+ * Inheritance: yes
+ * Variants: yes
  *
  * Fields Summary:
  * - localizedfields [localizedfields]
@@ -16,7 +16,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
    'name' => 'Category',
    'description' => '',
    'creationDate' => 0,
-   'modificationDate' => 1675962142,
+   'modificationDate' => 1676270272,
    'userOwner' => 2,
    'userModification' => 2,
    'parentClass' => '',
@@ -28,8 +28,8 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
    'encryptedTables' => 
   array (
   ),
-   'allowInherit' => false,
-   'allowVariants' => false,
+   'allowInherit' => true,
+   'allowVariants' => true,
    'showVariants' => false,
    'fieldDefinitions' => 
   array (

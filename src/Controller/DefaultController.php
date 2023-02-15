@@ -31,4 +31,6 @@ class DefaultController extends FrontendController
             'products' => $products
         ]);
     }
+
+    
 }
