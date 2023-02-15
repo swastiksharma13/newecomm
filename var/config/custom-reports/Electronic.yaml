@@ -6,28 +6,28 @@ pimcore:
                 sql: ''
                 dataSourceConfig:
                     -
-                        sql: 'brand,Count(*)'
+                        sql: 'Category,color'
                         from: object_electronic
                         where: ''
-                        groupby: brand
+                        groupby: color
                         type: sql
                 columnConfiguration:
                     -
-                        name: Brand
+                        name: color
                         display: true
                         export: true
                         order: true
                         width: ''
                         label: ''
-                        id: extModel4666-1
+                        id: extModel381-5
                     -
-                        name: 'Count(*)'
+                        name: Category
                         display: true
                         export: true
                         order: true
                         width: ''
                         label: ''
-                        id: extModel4666-2
+                        id: extModel381-6
                 niceName: ''
                 group: ''
                 groupIconClass: ''
@@ -35,12 +35,14 @@ pimcore:
                 menuShortcut: true
                 reportClass: ''
                 chartType: pie
-                pieColumn: null
-                pieLabelColumn: null
-                xAxis: null
-                yAxis: {  }
-                modificationDate: 1676271364
+                pieColumn: Category
+                pieLabelColumn: color
+                xAxis: electronicType
+                yAxis:
+                    - color
+                modificationDate: 1676462305
                 creationDate: 1676269285
                 shareGlobally: true
-                sharedUserNames: {  }
+                sharedUserNames:
+                    - admin
                 sharedRoleNames: {  }

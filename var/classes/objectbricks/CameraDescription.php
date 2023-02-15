@@ -159,10 +159,5 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
   ),
    'classDefinitions' => 
   array (
-    0 => 
-    array (
-      'classname' => 'Electronic',
-      'fieldname' => 'attributes',
-    ),
   ),
 ));

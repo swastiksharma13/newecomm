@@ -9,19 +9,14 @@
  * -- name [input]
  * -- description [wysiwyg]
  * - modelNumber [input]
- * - modelNumber [input]
  * - manufacturer [manyToOneRelation]
  * - electronicType [select]
  * - color [select]
  * - country [country]
- * - category [manyToManyObjectRelation]
  * - Brand [manyToOneRelation]
+ * - Category [manyToManyObjectRelation]
  * - image [image]
  * - genericImage [imageGallery]
- * - Specifications [objectbricks]
- * - image [image]
- * - genericImage [imageGallery]
- * - attributes [objectbricks]
  * - attributes [objectbricks]
  * - saleInformation [objectbricks]
  * - location [geopoint]
@@ -37,11 +32,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
    'name' => 'Electronic',
    'description' => '',
    'creationDate' => 0,
-
-   'modificationDate' => 1676216777,
-
-   'modificationDate' => 1676207403,
-   'modificationDate' => 1676207403,
+   'modificationDate' => 1676446103,
    'userOwner' => 2,
    'userModification' => 2,
    'parentClass' => '',
@@ -415,7 +406,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'restrictTo' => '',
               )),
               6 => 
-              Pimcore\Model\DataObject\ClassDefinition\Data\ManyToManyObjectRelation::__set_state(array(
+              Pimcore\Model\DataObject\ClassDefinition\Data\ManyToOneRelation::__set_state(array(
                  'name' => 'Brand',
                  'title' => 'Brand',
                  'tooltip' => '',
@@ -426,7 +417,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'style' => '',
                  'permissions' => NULL,
                  'datatype' => 'data',
-                 'fieldtype' => 'manyToManyObjectRelation',
+                 'fieldtype' => 'manyToOneRelation',
                  'relationType' => true,
                  'invisible' => false,
                  'visibleGridView' => false,
@@ -443,15 +434,14 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                 ),
                  'pathFormatterClass' => '',
                  'width' => '',
-                 'height' => '',
-                 'maxItems' => NULL,
-                 'visibleFields' => 
+                 'assetUploadPath' => '',
+                 'objectsAllowed' => true,
+                 'assetsAllowed' => false,
+                 'assetTypes' => 
                 array (
                 ),
-                 'allowToCreateNewObject' => false,
-                 'optimizedAdminLoading' => false,
-                 'enableTextSelection' => false,
-                 'visibleFieldDefinitions' => 
+                 'documentsAllowed' => false,
+                 'documentTypes' => 
                 array (
                 ),
               )),
@@ -621,21 +611,15 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                 ),
                  'allowedTypes' => 
                 array (
-                  0 => 'CellularTechnology',
-                  1 => 'CameraDescription',
-                  2 => 'ScreenSize',
-                  3 => 'Processor',
-                  4 => 'BatteryPowerInmaH',
-                  5 => 'RAM',
-                  6 => 'OperatingSystem',
-                  7 => 'itemWeight',
-                  8 => 'itemDimension',
-                  9 => 'screenResolution',
-                  10 => 'inBuildStorage',
-                  11 => 'warrentyDetails',
-                  12 => 'portAndConnectivity',
-                  13 => 'graphicCard',
-                  14 => 'SpecificationSpeaker',
+                  0 => 'ScreenSize',
+                  1 => 'Processor',
+                  2 => 'RAM',
+                  3 => 'OperatingSystem',
+                  4 => 'itemWeight',
+                  5 => 'screenResolution',
+                  6 => 'warrentyDetails',
+                  7 => 'portAndConnectivity',
+                  8 => 'SpeakerSpecs',
                 ),
                  'maxItems' => NULL,
                  'border' => false,
@@ -1029,43 +1013,6 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
    'enableGridLocking' => false,
    'deletedDataComponents' => 
   array (
-    0 => 
-    Pimcore\Model\DataObject\ClassDefinition\Data\ImageGallery::__set_state(array(
-       'name' => 'imageGallary',
-       'title' => 'Image Gallary',
-       'tooltip' => '',
-       'mandatory' => false,
-       'noteditable' => false,
-       'index' => false,
-       'locked' => false,
-       'style' => '',
-       'permissions' => NULL,
-       'datatype' => 'data',
-       'fieldtype' => 'imageGallery',
-       'relationType' => false,
-       'invisible' => false,
-       'visibleGridView' => false,
-       'visibleSearch' => false,
-       'blockedVarsForExport' => 
-      array (
-      ),
-       'queryColumnType' => 
-      array (
-        'images' => 'text',
-        'hotspots' => 'longtext',
-      ),
-       'columnType' => 
-      array (
-        'images' => 'text',
-        'hotspots' => 'longtext',
-      ),
-       'width' => 300,
-       'height' => 300,
-       'uploadPath' => '',
-       'ratioX' => NULL,
-       'ratioY' => NULL,
-       'predefinedDataTemplates' => '',
-    )),
   ),
    'blockedVarsForExport' => 
   array (
@@ -1073,5 +1020,4 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
    'activeDispatchingEvents' => 
   array (
   ),
-)
-);
+));

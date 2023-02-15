@@ -6,11 +6,11 @@
 
 return Pimcore\Model\DataObject\ClassDefinition\CustomLayout::__set_state(array(
    'dao' => NULL,
-   'id' => '2',
-   'name' => 'Data Entry',
+   'id' => '3',
+   'name' => 'Data Entry In Progress',
    'description' => '',
-   'creationDate' => 1676457343,
-   'modificationDate' => 1676457773,
+   'creationDate' => 1676457453,
+   'modificationDate' => 1676457842,
    'userOwner' => 2,
    'userModification' => 0,
    'classId' => 'electronic',

@@ -18,7 +18,7 @@
 
 return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
    'dao' => NULL,
-   'key' => 'SpecificationSpeaker',
+   'key' => 'SpeakerSpecs',
    'parentClass' => '',
    'implementsInterfaces' => '',
    'title' => '',
