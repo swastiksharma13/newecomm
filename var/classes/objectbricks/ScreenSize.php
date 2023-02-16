@@ -3,7 +3,6 @@
 /**
  * Fields Summary:
  * - screenSize [quantityValue]
- * - itemDimenstion [quantityValue]
  */
 
 return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
@@ -65,51 +64,15 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
             ),
              'width' => '',
              'unitWidth' => '',
-             'defaultValue' => NULL,
+             'defaultValue' => 0,
              'defaultUnit' => NULL,
              'validUnits' => 
             array (
+              0 => 'cm',
             ),
              'integer' => false,
              'unsigned' => false,
-             'minValue' => NULL,
-             'maxValue' => NULL,
-             'unique' => false,
-             'decimalSize' => NULL,
-             'decimalPrecision' => NULL,
-             'autoConvert' => false,
-             'defaultValueGenerator' => '',
-          )),
-          1 => 
-          Pimcore\Model\DataObject\ClassDefinition\Data\QuantityValue::__set_state(array(
-             'name' => 'itemDimenstion',
-             'title' => 'Item Dimenstion',
-             'tooltip' => '',
-             'mandatory' => false,
-             'noteditable' => false,
-             'index' => false,
-             'locked' => false,
-             'style' => '',
-             'permissions' => NULL,
-             'datatype' => 'data',
-             'fieldtype' => 'quantityValue',
-             'relationType' => false,
-             'invisible' => false,
-             'visibleGridView' => false,
-             'visibleSearch' => false,
-             'blockedVarsForExport' => 
-            array (
-            ),
-             'width' => '',
-             'unitWidth' => '',
-             'defaultValue' => NULL,
-             'defaultUnit' => NULL,
-             'validUnits' => 
-            array (
-            ),
-             'integer' => false,
-             'unsigned' => false,
-             'minValue' => NULL,
+             'minValue' => 0,
              'maxValue' => NULL,
              'unique' => false,
              'decimalSize' => NULL,

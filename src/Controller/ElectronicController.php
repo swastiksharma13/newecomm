@@ -2,8 +2,6 @@
 
 namespace App\Controller ;
 
-// use App\Model\ElectronicModel as Electronic;
-
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Pimcore\Controller\FrontendController;
 use Symfony\Component\HttpFoundation\Request;
@@ -15,9 +13,12 @@ use Pimcore\Model\DataObject\Electronic;
 class ElectronicController extends FrontendController
 { 
 
-    #[Route("/electronic/listing/{filter}"  ,name :"app_electronic_show_all")]
-    public function showAll(string $filter)
-    {
+    #[Route("/electronic/listing/{filter}"  ,name :"app_electronic_show_all" )]
+    public function showAll($filter ,Request $request) :Response
+    { 
+        // dd($filter);
+        //    $filter = $request->query->get('filter');
+        // dd($brand);
         $objects = new Electronic\Listing();
         $objects->setObjectTypes([Electronic::OBJECT_TYPE_VARIANT]);
         if($objects == null){
@@ -31,7 +32,7 @@ class ElectronicController extends FrontendController
         //  dd($product);
         if($product->getObjectType() == 'real-object'){
         $data = array(
-        'name' => $product->getName(),
+        'name' => $product->getName() ? $product->getName() : null ,
         'Color' => $product->getColor(),
         'Product Type' => $product->getObjectType() ? $product->getObjectType() : 'virtual-object',
         'description' => $product->getDescription(),
@@ -58,10 +59,7 @@ class ElectronicController extends FrontendController
     }  
     // dd($datas);
 
-        $resp = new JsonResponse($datas);
-       
-        // return the response
-        return $resp ;
+        return $this->json(["sucsess" , 'data' => $datas]);
         
 
     }
