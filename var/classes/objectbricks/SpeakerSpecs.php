@@ -343,39 +343,11 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
                  'blockedVarsForExport' => 
                 array (
                 ),
-                 'options' => 
-                array (
-                  0 => 
-                  array (
-                    'key' => 'Apple Music',
-                    'value' => 'Apple Music',
-                  ),
-                  1 => 
-                  array (
-                    'key' => 'Amazon Music',
-                    'value' => 'Amazon Music',
-                  ),
-                  2 => 
-                  array (
-                    'key' => 'Pandora',
-                    'value' => 'Pandora',
-                  ),
-                  3 => 
-                  array (
-                    'key' => 'Spotify',
-                    'value' => 'Spotify',
-                  ),
-                  4 => 
-                  array (
-                    'key' => 'Youtube Music',
-                    'value' => 'Youtube Music',
-                  ),
-                ),
                  'width' => '',
                  'height' => '',
                  'maxItems' => NULL,
                  'renderType' => 'list',
-                 'optionsProviderClass' => '',
+                 'optionsProviderClass' => 'App\\DyanmicDropdown\\CustomOptions',
                  'optionsProviderData' => '',
                  'dynamicOptions' => false,
               )),
