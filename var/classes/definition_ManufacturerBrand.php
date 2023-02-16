@@ -1,22 +1,21 @@
 <?php
 
 /**
- * Inheritance: yes
+ * Inheritance: no
  * Variants: no
  *
  * Fields Summary:
- * - yourName [input]
- * - Review [wysiwyg]
- * - Rating [slider]
+ * - name [input]
+ * - logo [imageGallery]
  */
 
 return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
    'dao' => NULL,
-   'id' => 'Review',
-   'name' => 'Review',
+   'id' => 'manufacturerBrand',
+   'name' => 'ManufacturerBrand',
    'description' => '',
    'creationDate' => 0,
-   'modificationDate' => 1675963261,
+   'modificationDate' => 1676283229,
    'userOwner' => 2,
    'userModification' => 2,
    'parentClass' => '',
@@ -28,7 +27,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
    'encryptedTables' => 
   array (
   ),
-   'allowInherit' => true,
+   'allowInherit' => false,
    'allowVariants' => false,
    'showVariants' => false,
    'fieldDefinitions' => 
@@ -51,7 +50,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
     array (
       0 => 
       Pimcore\Model\DataObject\ClassDefinition\Layout\Tabpanel::__set_state(array(
-         'name' => 'Review',
+         'name' => 'Layout',
          'type' => NULL,
          'region' => NULL,
          'title' => '',
@@ -66,10 +65,10 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
         array (
           0 => 
           Pimcore\Model\DataObject\ClassDefinition\Layout\Panel::__set_state(array(
-             'name' => 'LaptopReview',
+             'name' => 'Manufacturer',
              'type' => NULL,
              'region' => NULL,
-             'title' => 'Review',
+             'title' => 'Manufacturer',
              'width' => '',
              'height' => '',
              'collapsible' => false,
@@ -81,8 +80,8 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
             array (
               0 => 
               Pimcore\Model\DataObject\ClassDefinition\Data\Input::__set_state(array(
-                 'name' => 'yourName',
-                 'title' => 'Your Name',
+                 'name' => 'name',
+                 'title' => 'Name',
                  'tooltip' => '',
                  'mandatory' => false,
                  'noteditable' => false,
@@ -111,9 +110,9 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'defaultValueGenerator' => '',
               )),
               1 => 
-              Pimcore\Model\DataObject\ClassDefinition\Data\Wysiwyg::__set_state(array(
-                 'name' => 'Review',
-                 'title' => 'Review',
+              Pimcore\Model\DataObject\ClassDefinition\Data\ImageGallery::__set_state(array(
+                 'name' => 'logo',
+                 'title' => 'Logo',
                  'tooltip' => '',
                  'mandatory' => false,
                  'noteditable' => false,
@@ -122,7 +121,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'style' => '',
                  'permissions' => NULL,
                  'datatype' => 'data',
-                 'fieldtype' => 'wysiwyg',
+                 'fieldtype' => 'imageGallery',
                  'relationType' => false,
                  'invisible' => false,
                  'visibleGridView' => false,
@@ -130,39 +129,12 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'blockedVarsForExport' => 
                 array (
                 ),
-                 'width' => '',
-                 'height' => '',
-                 'toolbarConfig' => '',
-                 'excludeFromSearchIndex' => false,
-                 'maxCharacters' => '',
-              )),
-              2 => 
-              Pimcore\Model\DataObject\ClassDefinition\Data\Slider::__set_state(array(
-                 'name' => 'Rating',
-                 'title' => 'Rating',
-                 'tooltip' => '',
-                 'mandatory' => false,
-                 'noteditable' => false,
-                 'index' => false,
-                 'locked' => false,
-                 'style' => '',
-                 'permissions' => NULL,
-                 'datatype' => 'data',
-                 'fieldtype' => 'slider',
-                 'relationType' => false,
-                 'invisible' => false,
-                 'visibleGridView' => false,
-                 'visibleSearch' => false,
-                 'blockedVarsForExport' => 
-                array (
-                ),
-                 'width' => '',
-                 'height' => '',
-                 'minValue' => 0.0,
-                 'maxValue' => 5.0,
-                 'vertical' => false,
-                 'increment' => 1.0,
-                 'decimalPrecision' => NULL,
+                 'width' => 300,
+                 'height' => 300,
+                 'uploadPath' => '',
+                 'ratioX' => NULL,
+                 'ratioY' => NULL,
+                 'predefinedDataTemplates' => '',
               )),
             ),
              'locked' => false,
@@ -173,7 +145,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
              'layout' => NULL,
              'border' => false,
              'icon' => '',
-             'labelWidth' => 0,
+             'labelWidth' => 100,
              'labelAlign' => 'left',
           )),
         ),
@@ -197,9 +169,9 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
      'labelWidth' => 100,
      'labelAlign' => 'left',
   )),
-   'icon' => 'data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAyMi4xLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iRWJlbmVfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHdpZHRoPSIyNHB4IiBoZWlnaHQ9IjI0cHgiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMjQgMjQiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPHBhdGggZmlsbD0ibm9uZSIgZD0iTTAsMGgyNHYyNEgwVjB6Ii8+DQo8cGF0aCBmaWxsPSIjQTNBNUE3IiBkPSJNMjAsMkg0QzIuOSwyLDIsMi45LDIsNHYxOGw0LTRoMTRjMS4xLDAsMi0wLjksMi0yVjRDMjIsMi45LDIxLjEsMiwyMCwyeiBNMTUuNiwxNS41TDEyLDEzLjNsLTMuNiwyLjINCglsMC45LTQuMUw2LjIsOC43bDQuMi0wLjRMMTIsNC41bDEuNiwzLjhsNC4yLDAuNGwtMy4yLDIuN0wxNS42LDE1LjV6Ii8+DQo8L3N2Zz4NCg==',
+   'icon' => '/bundles/pimcoreadmin/img/flat-color-icons/factory.svg',
    'previewUrl' => '',
-   'group' => 'Master Data',
+   'group' => 'Product Data',
    'showAppLoggerTab' => false,
    'linkGeneratorReference' => '',
    'previewGeneratorReference' => '',
@@ -213,7 +185,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
     'grid' => 
     array (
       'id' => true,
-      'key' => false,
+      'key' => true,
       'path' => true,
       'published' => true,
       'modificationDate' => true,
@@ -232,6 +204,58 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
    'enableGridLocking' => false,
    'deletedDataComponents' => 
   array (
+    0 => 
+    Pimcore\Model\DataObject\ClassDefinition\Data\Date::__set_state(array(
+       'name' => 'ManufacturingDate',
+       'title' => 'Manufacturing Date',
+       'tooltip' => '',
+       'mandatory' => false,
+       'noteditable' => false,
+       'index' => false,
+       'locked' => false,
+       'style' => '',
+       'permissions' => NULL,
+       'datatype' => 'data',
+       'fieldtype' => 'date',
+       'relationType' => false,
+       'invisible' => false,
+       'visibleGridView' => false,
+       'visibleSearch' => false,
+       'blockedVarsForExport' => 
+      array (
+      ),
+       'queryColumnType' => 'bigint(20)',
+       'columnType' => 'bigint(20)',
+       'defaultValue' => NULL,
+       'useCurrentDate' => false,
+       'defaultValueGenerator' => '',
+    )),
+    1 => 
+    Pimcore\Model\DataObject\ClassDefinition\Data\Date::__set_state(array(
+       'name' => 'LaunchDate',
+       'title' => 'Launch Date',
+       'tooltip' => '',
+       'mandatory' => false,
+       'noteditable' => false,
+       'index' => false,
+       'locked' => false,
+       'style' => '',
+       'permissions' => NULL,
+       'datatype' => 'data',
+       'fieldtype' => 'date',
+       'relationType' => false,
+       'invisible' => false,
+       'visibleGridView' => false,
+       'visibleSearch' => false,
+       'blockedVarsForExport' => 
+      array (
+      ),
+       'queryColumnType' => 'bigint(20)',
+       'columnType' => 'bigint(20)',
+       'defaultValue' => NULL,
+       'useCurrentDate' => false,
+       'defaultValueGenerator' => '',
+    )),
   ),
    'blockedVarsForExport' => 
   array (

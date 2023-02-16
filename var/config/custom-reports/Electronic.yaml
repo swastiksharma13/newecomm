@@ -1,0 +1,48 @@
+pimcore:
+    custom_report:
+        definitions:
+            Electronic:
+                name: Electronic
+                sql: ''
+                dataSourceConfig:
+                    -
+                        sql: 'Category,color'
+                        from: object_electronic
+                        where: ''
+                        groupby: color
+                        type: sql
+                columnConfiguration:
+                    -
+                        name: color
+                        display: true
+                        export: true
+                        order: true
+                        width: ''
+                        label: ''
+                        id: extModel381-5
+                    -
+                        name: Category
+                        display: true
+                        export: true
+                        order: true
+                        width: ''
+                        label: ''
+                        id: extModel381-6
+                niceName: ''
+                group: ''
+                groupIconClass: ''
+                iconClass: ''
+                menuShortcut: true
+                reportClass: ''
+                chartType: pie
+                pieColumn: Category
+                pieLabelColumn: color
+                xAxis: electronicType
+                yAxis:
+                    - color
+                modificationDate: 1676462305
+                creationDate: 1676269285
+                shareGlobally: true
+                sharedUserNames:
+                    - admin
+                sharedRoleNames: {  }

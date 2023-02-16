@@ -7,12 +7,11 @@
  * Fields Summary:
  * - localizedfields [localizedfields]
  * -- Name [input]
- * - laptops [reverseObjectRelation]
  */
 
 return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
    'dao' => NULL,
-   'id' => 'Category',
+   'id' => '1',
    'name' => 'Category',
    'description' => '',
    'creationDate' => 0,
@@ -66,7 +65,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
         array (
           0 => 
           Pimcore\Model\DataObject\ClassDefinition\Layout\Panel::__set_state(array(
-             'name' => 'Layout',
+             'name' => 'Base Data',
              'type' => NULL,
              'region' => NULL,
              'title' => 'Name',
@@ -86,8 +85,12 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'tooltip' => '',
                  'mandatory' => false,
                  'noteditable' => false,
+                 'tooltip' => '',
+                 'mandatory' => false,
+                 'noteditable' => false,
                  'index' => NULL,
                  'locked' => false,
+                 'style' => '',
                  'style' => '',
                  'permissions' => NULL,
                  'datatype' => 'data',
@@ -250,9 +253,9 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
      'labelWidth' => 100,
      'labelAlign' => 'left',
   )),
-   'icon' => '',
+   'icon' => '/bundles/pimcoreadmin/img/flat-color-icons/genealogy.svg',
    'previewUrl' => '',
-   'group' => '',
+   'group' => 'Product Data',
    'showAppLoggerTab' => false,
    'linkGeneratorReference' => '',
    'previewGeneratorReference' => '',
@@ -285,6 +288,46 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
    'enableGridLocking' => false,
    'deletedDataComponents' => 
   array (
+    0 => 
+    Pimcore\Model\DataObject\ClassDefinition\Data\ReverseObjectRelation::__set_state(array(
+       'name' => 'electronic',
+       'title' => 'Electronic',
+       'tooltip' => '',
+       'mandatory' => false,
+       'noteditable' => false,
+       'index' => false,
+       'locked' => false,
+       'style' => '',
+       'permissions' => NULL,
+       'datatype' => 'data',
+       'fieldtype' => 'reverseObjectRelation',
+       'relationType' => true,
+       'invisible' => false,
+       'visibleGridView' => false,
+       'visibleSearch' => false,
+       'blockedVarsForExport' => 
+      array (
+      ),
+       'classes' => 
+      array (
+      ),
+       'pathFormatterClass' => '',
+       'width' => '',
+       'height' => '',
+       'maxItems' => NULL,
+       'queryColumnType' => 'text',
+       'visibleFields' => NULL,
+       'allowToCreateNewObject' => true,
+       'optimizedAdminLoading' => false,
+       'enableTextSelection' => false,
+       'visibleFieldDefinitions' => 
+      array (
+      ),
+       'ownerClassName' => 'Electronic',
+       'ownerClassId' => NULL,
+       'ownerFieldName' => 'category',
+       'lazyLoading' => true,
+    )),
   ),
    'blockedVarsForExport' => 
   array (

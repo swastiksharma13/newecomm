@@ -1,42 +1,21 @@
 <?php
 
 /**
- * Inheritance: yes
- * Variants: no
- *
  * Fields Summary:
- * - B_Id [input]
- * - BrandName [input]
- * - B_Logo [image]
+ * - frontCamera [input]
+ * - rearCamera [input]
  */
 
-return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
+return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
    'dao' => NULL,
-   'id' => '4',
-   'name' => 'Brand',
-   'description' => '',
-   'creationDate' => 0,
-   'modificationDate' => 1676221309,
-   'userOwner' => 2,
-   'userModification' => 2,
+   'key' => 'CameraDescription',
    'parentClass' => '',
    'implementsInterfaces' => '',
-   'listingParentClass' => '',
-   'useTraits' => '',
-   'listingUseTraits' => '',
-   'encryption' => false,
-   'encryptedTables' => 
-  array (
-  ),
-   'allowInherit' => true,
-   'allowVariants' => false,
-   'showVariants' => false,
-   'fieldDefinitions' => 
-  array (
-  ),
+   'title' => '',
+   'group' => '',
    'layoutDefinitions' => 
   Pimcore\Model\DataObject\ClassDefinition\Layout\Panel::__set_state(array(
-     'name' => 'pimcore_root',
+     'name' => NULL,
      'type' => NULL,
      'region' => NULL,
      'title' => NULL,
@@ -50,11 +29,11 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
      'children' => 
     array (
       0 => 
-      Pimcore\Model\DataObject\ClassDefinition\Layout\Tabpanel::__set_state(array(
-         'name' => 'Layout',
+      Pimcore\Model\DataObject\ClassDefinition\Layout\Panel::__set_state(array(
+         'name' => 'Camera Description',
          'type' => NULL,
          'region' => NULL,
-         'title' => 'Brand',
+         'title' => 'Camera Description',
          'width' => '',
          'height' => '',
          'collapsible' => false,
@@ -65,11 +44,11 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
          'children' => 
         array (
           0 => 
-          Pimcore\Model\DataObject\ClassDefinition\Layout\Panel::__set_state(array(
-             'name' => 'Brand',
+          Pimcore\Model\DataObject\ClassDefinition\Layout\Fieldset::__set_state(array(
+             'name' => 'Layout',
              'type' => NULL,
              'region' => NULL,
-             'title' => 'Brand',
+             'title' => '',
              'width' => '',
              'height' => '',
              'collapsible' => false,
@@ -81,8 +60,8 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
             array (
               0 => 
               Pimcore\Model\DataObject\ClassDefinition\Data\Input::__set_state(array(
-                 'name' => 'B_Id',
-                 'title' => 'B _ Id',
+                 'name' => 'frontCamera',
+                 'title' => 'Front Camera',
                  'tooltip' => '',
                  'mandatory' => false,
                  'noteditable' => false,
@@ -112,8 +91,8 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
               )),
               1 => 
               Pimcore\Model\DataObject\ClassDefinition\Data\Input::__set_state(array(
-                 'name' => 'BrandName',
-                 'title' => 'Brand Name',
+                 'name' => 'rearCamera',
+                 'title' => 'Rear Camera',
                  'tooltip' => '',
                  'mandatory' => false,
                  'noteditable' => false,
@@ -141,39 +120,12 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'showCharCount' => false,
                  'defaultValueGenerator' => '',
               )),
-              2 => 
-              Pimcore\Model\DataObject\ClassDefinition\Data\Image::__set_state(array(
-                 'name' => 'B_Logo',
-                 'title' => 'B _ Logo',
-                 'tooltip' => '',
-                 'mandatory' => false,
-                 'noteditable' => false,
-                 'index' => false,
-                 'locked' => false,
-                 'style' => '',
-                 'permissions' => NULL,
-                 'datatype' => 'data',
-                 'fieldtype' => 'image',
-                 'relationType' => false,
-                 'invisible' => false,
-                 'visibleGridView' => false,
-                 'visibleSearch' => false,
-                 'blockedVarsForExport' => 
-                array (
-                ),
-                 'width' => '',
-                 'height' => '',
-                 'uploadPath' => '',
-              )),
             ),
              'locked' => false,
              'blockedVarsForExport' => 
             array (
             ),
-             'fieldtype' => 'panel',
-             'layout' => NULL,
-             'border' => false,
-             'icon' => '',
+             'fieldtype' => 'fieldset',
              'labelWidth' => 0,
              'labelAlign' => 'left',
           )),
@@ -182,9 +134,12 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
          'blockedVarsForExport' => 
         array (
         ),
-         'fieldtype' => 'tabpanel',
+         'fieldtype' => 'panel',
+         'layout' => NULL,
          'border' => false,
-         'tabPosition' => NULL,
+         'icon' => '',
+         'labelWidth' => 100,
+         'labelAlign' => 'left',
       )),
     ),
      'locked' => false,
@@ -198,46 +153,11 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
      'labelWidth' => 100,
      'labelAlign' => 'left',
   )),
-   'icon' => '/bundles/pimcoreadmin/img/flat-color-icons/copyright.svg',
-   'previewUrl' => '',
-   'group' => 'Master Data',
-   'showAppLoggerTab' => false,
-   'linkGeneratorReference' => '',
-   'previewGeneratorReference' => '',
-   'compositeIndices' => 
-  array (
-  ),
    'generateTypeDeclarations' => true,
-   'showFieldLookup' => false,
-   'propertyVisibility' => 
-  array (
-    'grid' => 
-    array (
-      'id' => true,
-      'key' => false,
-      'path' => true,
-      'published' => true,
-      'modificationDate' => true,
-      'creationDate' => true,
-    ),
-    'search' => 
-    array (
-      'id' => true,
-      'key' => false,
-      'path' => true,
-      'published' => true,
-      'modificationDate' => true,
-      'creationDate' => true,
-    ),
-  ),
-   'enableGridLocking' => true,
-   'deletedDataComponents' => 
-  array (
-  ),
    'blockedVarsForExport' => 
   array (
   ),
-   'activeDispatchingEvents' => 
+   'classDefinitions' => 
   array (
   ),
 ));

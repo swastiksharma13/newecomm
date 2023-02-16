@@ -2,6 +2,7 @@ imports:
     - { resource: 'local/' }
     - { resource: 'workflow/'}
 
+
 pimcore:
 
 # IMPORTANT Notice!

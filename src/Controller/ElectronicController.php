@@ -9,59 +9,21 @@ use Pimcore\Controller\FrontendController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
-use Pimcore\Model\DataObject\Laptop;
-
+use Pimcore\Model\DataObject\Electronic;
 
 class ElectronicController extends FrontendController
 { 
-
-    #[Route("/electronic"  ,name :"app_electronic_show_all")]
     public function showAll()
     {
-        $objects = new Laptop\Listing();
-        if($objects == null){
-            return new Response("<div style='color:red;'>Error !! Product not fount</div>");
-        }
-        // dd($objects);
-        foreach($objects as $product){
-          $datas = array();
-        //  dd($product);
-        $data = array(
-        'name' => $product->getSku(),
-        'description' => $product->getLaptopBaseDetails()->getLaptopBaseDetails() ? $product->getLaptopBaseDetails()->getLaptopBaseDetails()->getL_Description() : null   ,
-        'image_url' => $product->getMedia_L(),
-        'Brand' => $product->getBrand() ? $product->getBrand()->getBrandName() : null,
-        'Operating System' => $product->getLaptopMains()->getLaptopMains()? $product->getLaptopMains()->getLaptopMains()->getOS() : null ,
-        
-        // 'Camera description' => $product->getLaptopSpec()->getLaptopSpec()? ($product->getLaptopSpec()->getLaptopSpec()->getCamera()) : null ,
-      
-        'Scree size' =>  $product->getLaptopMains()->getLaptopMains()? $product->getLaptopMains()->getLaptopMains()->getScreenSize() : null ,
-        // 'Battery Power in mah' => $product->getAttributes()->get ? $product->getAttributes()->getBatteryPowerInmaH()->getBatteryPoewerInmah() : null ,
-        'RAM' => $product->getLaptopMains()->getLaptopMains()? $product->getLaptopMains()->getLaptopMains()->getRamCapacity() : null ,
-        'InbuildStorage' => $product->getLaptopMains()->getLaptopMains()? $product->getLaptopMains()->getLaptopMains()->getSSD_Capacity() : null ,
-        'Processor' => $product->getLaptopMains()->getLaptopMains()? $product->getLaptopMains()->getLaptopMains()->getProcessor() : null ,
-        // 'Warrenty Details' => $product->getAttributes()->getWarrentyDetails() ? $product->getAttributes()->getWarrentyDetails()->getWarrentyDetails() : null
-                
-          );
-          array_push($datas , $data);
-          $data = array();
-            // dd($object);
-        }
-
-        $resp = new JsonResponse($datas);
-       
-        // return the response
-        return $resp ;
-        
-
+        return $this->render('product/index.html.twig');
     }
     
 
-    #[Route('/electronic/{id}' , name: 'app_electronic_show_one')]
+    #[Route('/electronic/{id}' , name: 'app_electronic_show')]
     public function index(Request $request, $id ): Response
     {
 
-        $product = Laptop::getById($id);
+        $product = Electronic::getById($id);
 
 
         //checking product is 
@@ -71,20 +33,22 @@ class ElectronicController extends FrontendController
 
           // format the response data as a JSON object
     $data = array(
-        'name' => $product->getSku(),
-        'description' => $product->getLaptopBaseDetails()->getLaptopBaseDetails() ? $product->getLaptopBaseDetails()->getLaptopBaseDetails()->getL_Description() : null   ,
-        'image_url' => $product->getMedia_L(),
-        'Brand' => $product->getBrand() ? $product->getBrand()->getBrandName() : null,
-        'Operating System' => $product->getLaptopMains()->getLaptopMains()? $product->getLaptopMains()->getLaptopMains()->getOS() : null ,
-        
-        // 'Camera description' => $product->getLaptopSpec()->getLaptopSpec()? ($product->getLaptopSpec()->getLaptopSpec()->getCamera()) : null ,
+        'name' => $product->getName(),
+        'Product Type' => $product->getObjectType() ? $product->getObjectType() : 'virtual-object',
+        'description' => $product->getDescription(),
+        'image_url' => $product->getImage(),
+        'Brand' => $product->getManufacturer()->getName(),
+        'Operating System' => $product->getAttributes()->getOperatingSystem()? $product->getAttributes()->getOperatingSystem()->getOperatingSystem() : null ,
+        'Cellular Technology' => $product->getAttributes()->getCellularTechnology()? $product->getAttributes()->getCellularTechnology()->getCellularType() : null ,
+        'Camera description' => $product->getAttributes()->getCameraDescription()? ($product->getAttributes()->getCameraDescription()->getFrontCamera()."front Camera And ".$product->getAttributes()->getCameraDescription()->getRearCamera()) : null ,
       
-        'Scree size' =>  $product->getLaptopMains()->getLaptopMains()? $product->getLaptopMains()->getLaptopMains()->getScreenSize() : null ,
-        // 'Battery Power in mah' => $product->getAttributes()->get ? $product->getAttributes()->getBatteryPowerInmaH()->getBatteryPoewerInmah() : null ,
-        'RAM' => $product->getLaptopMains()->getLaptopMains()? $product->getLaptopMains()->getLaptopMains()->getRamCapacity() : null ,
-        'InbuildStorage' => $product->getLaptopMains()->getLaptopMains()? $product->getLaptopMains()->getLaptopMains()->getSSD_Capacity() : null ,
-        'Processor' => $product->getLaptopMains()->getLaptopMains()? $product->getLaptopMains()->getLaptopMains()->getProcessor() : null ,
-        // 'Warrenty Details' => $product->getAttributes()->getWarrentyDetails() ? $product->getAttributes()->getWarrentyDetails()->getWarrentyDetails() : null
+        'Scree size' =>  $product->getAttributes()->getScreenSize() ? $product->getAttributes()->getScreenSize()->getScreenSize() : null ,
+        'Screen Resolution' => $product->getAttributes()->getScreenResolution() ? $product->getAttributes()->getScreenResolution()->getScreenResolution() : null ,
+        'Battery Power in mah' => $product->getAttributes()->getBatteryPowerInmaH() ? $product->getAttributes()->getBatteryPowerInmaH()->getBatteryPoewerInmah() : null ,
+        'RAM' => $product->getAttributes()->getRAM() ? $product->getAttributes()->getRAM() : null ,
+        'InbuildStorage' => $product->getAttributes()->getInBuildStorage() ? $product->getAttributes()->getInBuildStorage()->getInbuildStorage() : null,
+        'Processor' => $product->getAttributes()->getProcessor() ? $product->getAttributes()->getProcessor()->getProcessorName() : null ,
+        'Warrenty Details' => $product->getAttributes()->getWarrentyDetails() ? $product->getAttributes()->getWarrentyDetails()->getWarrentyDetails() : null
 
     );
     // return the response data as JSON
