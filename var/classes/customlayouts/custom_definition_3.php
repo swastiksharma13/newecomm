@@ -1,49 +1,19 @@
 <?php
 
 /**
- * Inheritance: yes
- * Variants: yes
- *
- * Fields Summary:
- * - Laptop_ID [input]
- * - LaptopBaseDetails [objectbricks]
- * - Sku [input]
- * - LaptopType [select]
- * - Category [manyToManyObjectRelation]
- * - Brand [manyToOneRelation]
- * - Media_L [imageGallery]
- * - LaptopSpecs [objectbricks]
- * - ManufacturingDate [date]
- * - ReleaseDate [date]
- * - Delivery [manyToManyObjectRelation]
- * - LaptopMains [objectbricks]
- * - Review [manyToOneRelation]
- */
+*/
 
-return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
+
+return Pimcore\Model\DataObject\ClassDefinition\CustomLayout::__set_state(array(
    'dao' => NULL,
-   'id' => 'Laptop',
-   'name' => 'Laptop',
+   'id' => '3',
+   'name' => 'Reviewer',
    'description' => '',
-   'creationDate' => 0,
+   'creationDate' => 1676282239,
    'modificationDate' => 1676367812,
    'userOwner' => 2,
-   'userModification' => 2,
-   'parentClass' => '',
-   'implementsInterfaces' => '',
-   'listingParentClass' => '',
-   'useTraits' => '',
-   'listingUseTraits' => '',
-   'encryption' => false,
-   'encryptedTables' => 
-  array (
-  ),
-   'allowInherit' => true,
-   'allowVariants' => true,
-   'showVariants' => true,
-   'fieldDefinitions' => 
-  array (
-  ),
+   'userModification' => 0,
+   'classId' => 'Laptop',
    'layoutDefinitions' => 
   Pimcore\Model\DataObject\ClassDefinition\Layout\Panel::__set_state(array(
      'name' => 'pimcore_root',
@@ -335,10 +305,37 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
              'permissions' => NULL,
              'children' => 
             array (
+            ),
+             'locked' => false,
+             'blockedVarsForExport' => 
+            array (
+            ),
+             'fieldtype' => 'panel',
+             'layout' => NULL,
+             'border' => false,
+             'icon' => '',
+             'labelWidth' => 0,
+             'labelAlign' => 'left',
+          )),
+          2 => 
+          Pimcore\Model\DataObject\ClassDefinition\Layout\Panel::__set_state(array(
+             'name' => 'LaptopDetails',
+             'type' => NULL,
+             'region' => NULL,
+             'title' => 'Laptop Details',
+             'width' => '',
+             'height' => '',
+             'collapsible' => false,
+             'collapsed' => false,
+             'bodyStyle' => '',
+             'datatype' => 'layout',
+             'permissions' => NULL,
+             'children' => 
+            array (
               0 => 
-              Pimcore\Model\DataObject\ClassDefinition\Data\ImageGallery::__set_state(array(
-                 'name' => 'Media_L',
-                 'title' => 'Media_L',
+              Pimcore\Model\DataObject\ClassDefinition\Data\Objectbricks::__set_state(array(
+                 'name' => 'LaptopMains',
+                 'title' => 'Laptop Mains',
                  'tooltip' => '',
                  'mandatory' => false,
                  'noteditable' => false,
@@ -347,7 +344,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'style' => '',
                  'permissions' => NULL,
                  'datatype' => 'data',
-                 'fieldtype' => 'imageGallery',
+                 'fieldtype' => 'objectbricks',
                  'relationType' => false,
                  'invisible' => false,
                  'visibleGridView' => false,
@@ -355,12 +352,12 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'blockedVarsForExport' => 
                 array (
                 ),
-                 'width' => '',
-                 'height' => '',
-                 'uploadPath' => '',
-                 'ratioX' => NULL,
-                 'ratioY' => NULL,
-                 'predefinedDataTemplates' => '',
+                 'allowedTypes' => 
+                array (
+                  0 => 'LaptopMains',
+                ),
+                 'maxItems' => NULL,
+                 'border' => false,
               )),
             ),
              'locked' => false,
@@ -371,10 +368,10 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
              'layout' => NULL,
              'border' => false,
              'icon' => '',
-             'labelWidth' => 100,
+             'labelWidth' => 0,
              'labelAlign' => 'left',
           )),
-          2 => 
+          3 => 
           Pimcore\Model\DataObject\ClassDefinition\Layout\Panel::__set_state(array(
              'name' => 'LaptopSpecs',
              'type' => NULL,
@@ -428,7 +425,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
              'labelWidth' => 0,
              'labelAlign' => 'left',
           )),
-          3 => 
+          4 => 
           Pimcore\Model\DataObject\ClassDefinition\Layout\Panel::__set_state(array(
              'name' => 'Sales',
              'type' => NULL,
@@ -444,7 +441,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
              'children' => 
             array (
               0 => 
-              Pimcore\Model\DataObject\ClassDefinition\Data\Date::__set_state(array(
+              Pimcore\Model\DataObject\ClassDefinition\Data\Datetime::__set_state(array(
                  'name' => 'ManufacturingDate',
                  'title' => 'Manufacturing Date',
                  'tooltip' => '',
@@ -455,7 +452,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'style' => '',
                  'permissions' => NULL,
                  'datatype' => 'data',
-                 'fieldtype' => 'date',
+                 'fieldtype' => 'datetime',
                  'relationType' => false,
                  'invisible' => false,
                  'visibleGridView' => false,
@@ -470,7 +467,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'defaultValueGenerator' => '',
               )),
               1 => 
-              Pimcore\Model\DataObject\ClassDefinition\Data\Date::__set_state(array(
+              Pimcore\Model\DataObject\ClassDefinition\Data\Datetime::__set_state(array(
                  'name' => 'ReleaseDate',
                  'title' => 'Release Date',
                  'tooltip' => '',
@@ -481,7 +478,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'style' => '',
                  'permissions' => NULL,
                  'datatype' => 'data',
-                 'fieldtype' => 'date',
+                 'fieldtype' => 'datetime',
                  'relationType' => false,
                  'invisible' => false,
                  'visibleGridView' => false,
@@ -507,7 +504,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
              'labelWidth' => 0,
              'labelAlign' => 'left',
           )),
-          4 => 
+          5 => 
           Pimcore\Model\DataObject\ClassDefinition\Layout\Panel::__set_state(array(
              'name' => 'Delivery',
              'type' => NULL,
@@ -562,60 +559,6 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'visibleFieldDefinitions' => 
                 array (
                 ),
-              )),
-            ),
-             'locked' => false,
-             'blockedVarsForExport' => 
-            array (
-            ),
-             'fieldtype' => 'panel',
-             'layout' => NULL,
-             'border' => false,
-             'icon' => '',
-             'labelWidth' => 0,
-             'labelAlign' => 'left',
-          )),
-          5 => 
-          Pimcore\Model\DataObject\ClassDefinition\Layout\Panel::__set_state(array(
-             'name' => 'LaptopDetails',
-             'type' => NULL,
-             'region' => NULL,
-             'title' => 'Laptop Details',
-             'width' => '',
-             'height' => '',
-             'collapsible' => false,
-             'collapsed' => false,
-             'bodyStyle' => '',
-             'datatype' => 'layout',
-             'permissions' => NULL,
-             'children' => 
-            array (
-              0 => 
-              Pimcore\Model\DataObject\ClassDefinition\Data\Objectbricks::__set_state(array(
-                 'name' => 'LaptopMains',
-                 'title' => 'Laptop Mains',
-                 'tooltip' => '',
-                 'mandatory' => false,
-                 'noteditable' => false,
-                 'index' => false,
-                 'locked' => false,
-                 'style' => '',
-                 'permissions' => NULL,
-                 'datatype' => 'data',
-                 'fieldtype' => 'objectbricks',
-                 'relationType' => false,
-                 'invisible' => false,
-                 'visibleGridView' => false,
-                 'visibleSearch' => false,
-                 'blockedVarsForExport' => 
-                array (
-                ),
-                 'allowedTypes' => 
-                array (
-                  0 => 'LaptopMains',
-                ),
-                 'maxItems' => NULL,
-                 'border' => false,
               )),
             ),
              'locked' => false,
@@ -717,79 +660,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
      'labelWidth' => 100,
      'labelAlign' => 'left',
   )),
-   'icon' => 'data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAyMi4xLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iRWJlbmVfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHdpZHRoPSIyNHB4IiBoZWlnaHQ9IjI0cHgiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMjQgMjQiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPHBhdGggZmlsbD0ibm9uZSIgZD0iTTAsMGgyNHYyNEgwVjB6Ii8+DQo8cGF0aCBmaWxsPSIjQTNBNUE3IiBkPSJNMjAsMThjMS4xLDAsMi0wLjksMi0yVjVjMC0xLjEtMC45LTItMi0ySDRDMi45LDMsMiwzLjksMiw1djExYzAsMS4xLDAuOSwyLDIsMkgwYzAsMS4xLDAuOSwyLDIsMmgyMA0KCWMxLjEsMCwyLTAuOSwyLTJIMjB6Ii8+DQo8cmVjdCB4PSI0IiB5PSI1IiBmaWxsPSIjMEMwRjEyIiB3aWR0aD0iMTYiIGhlaWdodD0iMTEiLz4NCjxjaXJjbGUgZmlsbD0iIzBDMEYxMiIgY3g9IjEyIiBjeT0iMTgiIHI9IjEiLz4NCjwvc3ZnPg0K',
-   'previewUrl' => '',
-   'group' => 'Master Data',
-   'showAppLoggerTab' => false,
-   'linkGeneratorReference' => '',
-   'previewGeneratorReference' => '',
-   'compositeIndices' => 
-  array (
-  ),
-   'generateTypeDeclarations' => true,
-   'showFieldLookup' => false,
-   'propertyVisibility' => 
-  array (
-    'grid' => 
-    array (
-      'id' => true,
-      'key' => true,
-      'path' => true,
-      'published' => true,
-      'modificationDate' => true,
-      'creationDate' => true,
-    ),
-    'search' => 
-    array (
-      'id' => true,
-      'key' => false,
-      'path' => true,
-      'published' => true,
-      'modificationDate' => true,
-      'creationDate' => true,
-    ),
-  ),
-   'enableGridLocking' => true,
-   'deletedDataComponents' => 
-  array (
-    0 => 
-    Pimcore\Model\DataObject\ClassDefinition\Data\ImageGallery::__set_state(array(
-       'name' => 'image',
-       'title' => 'image',
-       'tooltip' => '',
-       'mandatory' => false,
-       'noteditable' => false,
-       'index' => false,
-       'locked' => false,
-       'style' => '',
-       'permissions' => NULL,
-       'datatype' => 'data',
-       'fieldtype' => 'imageGallery',
-       'relationType' => false,
-       'invisible' => false,
-       'visibleGridView' => false,
-       'visibleSearch' => false,
-       'blockedVarsForExport' => 
-      array (
-      ),
-       'queryColumnType' => 
-      array (
-        'images' => 'text',
-        'hotspots' => 'longtext',
-      ),
-       'columnType' => 
-      array (
-        'images' => 'text',
-        'hotspots' => 'longtext',
-      ),
-       'width' => '',
-       'height' => '',
-       'uploadPath' => '',
-       'ratioX' => NULL,
-       'ratioY' => NULL,
-       'predefinedDataTemplates' => '',
-    )),
-  ),
+   'default' => 0,
    'blockedVarsForExport' => 
   array (
   ),

@@ -72,4 +72,5 @@ services:
     # Example event listener for objects
     App\EventListner\validationdate:
         tags:
+            - { name: kernel.event_listener, event: pimcore.asset.preUpdate, method: onPreUpdate }
             - { name: kernel.event_listener, event: pimcore.dataobject.preUpdate, method: onObjectPreUpdate }

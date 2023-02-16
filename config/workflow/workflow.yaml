@@ -38,7 +38,7 @@ pimcore:
         reject_product:
           from: [new, content_prepared]
           to: rejected
-          guard: "is_fully_authenticated() and is_granted('ROLE_DATAENTRY')"
+          guard: "is_fully_authenticated() and is_granted('ROLE_REVIEWER')"
           options:
             label: "Reject the product"
             notes:
@@ -62,7 +62,7 @@ pimcore:
         editing_needed:
           from: content_prepared
           to: new
-          guard: "is_fully_authenticated() and is_granted('ROLE_REVIEWER')"
+          guard: "is_fully_authenticated() and is_granted('ROLE_DATAENTRY')"
           options:
             label: "EntryUser edit the data"
 

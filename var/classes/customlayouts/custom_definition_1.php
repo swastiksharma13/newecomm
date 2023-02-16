@@ -10,7 +10,7 @@ return Pimcore\Model\DataObject\ClassDefinition\CustomLayout::__set_state(array(
    'name' => 'DataEntry',
    'description' => '',
    'creationDate' => 1676228193,
-   'modificationDate' => 1676228232,
+   'modificationDate' => 1676367812,
    'userOwner' => 2,
    'userModification' => 0,
    'classId' => 'Laptop',
@@ -305,33 +305,6 @@ return Pimcore\Model\DataObject\ClassDefinition\CustomLayout::__set_state(array(
              'permissions' => NULL,
              'children' => 
             array (
-              0 => 
-              Pimcore\Model\DataObject\ClassDefinition\Data\ImageGallery::__set_state(array(
-                 'name' => 'Media_L',
-                 'title' => 'Media _ L',
-                 'tooltip' => '',
-                 'mandatory' => false,
-                 'noteditable' => false,
-                 'index' => false,
-                 'locked' => false,
-                 'style' => '',
-                 'permissions' => NULL,
-                 'datatype' => 'data',
-                 'fieldtype' => 'imageGallery',
-                 'relationType' => false,
-                 'invisible' => false,
-                 'visibleGridView' => false,
-                 'visibleSearch' => false,
-                 'blockedVarsForExport' => 
-                array (
-                ),
-                 'width' => '',
-                 'height' => '',
-                 'uploadPath' => '',
-                 'ratioX' => NULL,
-                 'ratioY' => NULL,
-                 'predefinedDataTemplates' => '',
-              )),
             ),
              'locked' => false,
              'blockedVarsForExport' => 
