@@ -2,8 +2,8 @@
 
 /**
  * Fields Summary:
- * - frontCamera [input]
- * - rearCamera [input]
+ * - frontCamera [quantityValue]
+ * - rearCamera [quantityValue]
  */
 
 return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
@@ -59,7 +59,7 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
              'children' => 
             array (
               0 => 
-              Pimcore\Model\DataObject\ClassDefinition\Data\Input::__set_state(array(
+              Pimcore\Model\DataObject\ClassDefinition\Data\QuantityValue::__set_state(array(
                  'name' => 'frontCamera',
                  'title' => 'Front Camera',
                  'tooltip' => '',
@@ -70,7 +70,7 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
                  'style' => '',
                  'permissions' => NULL,
                  'datatype' => 'data',
-                 'fieldtype' => 'input',
+                 'fieldtype' => 'quantityValue',
                  'relationType' => false,
                  'invisible' => false,
                  'visibleGridView' => false,
@@ -79,18 +79,25 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
                 array (
                 ),
                  'width' => '',
+                 'unitWidth' => '',
                  'defaultValue' => NULL,
-                 'columnLength' => 190,
-                 'regex' => '',
-                 'regexFlags' => 
+                 'defaultUnit' => NULL,
+                 'validUnits' => 
                 array (
+                  0 => 'mp',
                 ),
-                 'unique' => false,
-                 'showCharCount' => false,
+                 'integer' => false,
+                 'unsigned' => false,
+                 'minValue' => NULL,
+                 'maxValue' => NULL,
+                 'unique' => NULL,
+                 'decimalSize' => NULL,
+                 'decimalPrecision' => NULL,
+                 'autoConvert' => false,
                  'defaultValueGenerator' => '',
               )),
               1 => 
-              Pimcore\Model\DataObject\ClassDefinition\Data\Input::__set_state(array(
+              Pimcore\Model\DataObject\ClassDefinition\Data\QuantityValue::__set_state(array(
                  'name' => 'rearCamera',
                  'title' => 'Rear Camera',
                  'tooltip' => '',
@@ -101,7 +108,7 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
                  'style' => '',
                  'permissions' => NULL,
                  'datatype' => 'data',
-                 'fieldtype' => 'input',
+                 'fieldtype' => 'quantityValue',
                  'relationType' => false,
                  'invisible' => false,
                  'visibleGridView' => false,
@@ -110,14 +117,21 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
                 array (
                 ),
                  'width' => '',
+                 'unitWidth' => '',
                  'defaultValue' => NULL,
-                 'columnLength' => 190,
-                 'regex' => '',
-                 'regexFlags' => 
+                 'defaultUnit' => NULL,
+                 'validUnits' => 
                 array (
+                  0 => 'mp',
                 ),
-                 'unique' => false,
-                 'showCharCount' => false,
+                 'integer' => false,
+                 'unsigned' => false,
+                 'minValue' => NULL,
+                 'maxValue' => NULL,
+                 'unique' => NULL,
+                 'decimalSize' => NULL,
+                 'decimalPrecision' => NULL,
+                 'autoConvert' => false,
                  'defaultValueGenerator' => '',
               )),
             ),
@@ -138,7 +152,7 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
          'layout' => NULL,
          'border' => false,
          'icon' => '',
-         'labelWidth' => 100,
+         'labelWidth' => 0,
          'labelAlign' => 'left',
       )),
     ),

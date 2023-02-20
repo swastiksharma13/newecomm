@@ -2,7 +2,7 @@
 
 /**
  * Fields Summary:
- * - warrentyDetails [wysiwyg]
+ * - warrentyDetails [input]
  */
 
 return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
@@ -43,7 +43,7 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
          'children' => 
         array (
           0 => 
-          Pimcore\Model\DataObject\ClassDefinition\Data\Wysiwyg::__set_state(array(
+          Pimcore\Model\DataObject\ClassDefinition\Data\Input::__set_state(array(
              'name' => 'warrentyDetails',
              'title' => 'Warrenty Details',
              'tooltip' => '',
@@ -54,7 +54,7 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
              'style' => '',
              'permissions' => NULL,
              'datatype' => 'data',
-             'fieldtype' => 'wysiwyg',
+             'fieldtype' => 'input',
              'relationType' => false,
              'invisible' => false,
              'visibleGridView' => false,
@@ -63,10 +63,15 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
             array (
             ),
              'width' => '',
-             'height' => '',
-             'toolbarConfig' => '',
-             'excludeFromSearchIndex' => false,
-             'maxCharacters' => '',
+             'defaultValue' => NULL,
+             'columnLength' => 190,
+             'regex' => '',
+             'regexFlags' => 
+            array (
+            ),
+             'unique' => false,
+             'showCharCount' => false,
+             'defaultValueGenerator' => '',
           )),
         ),
          'locked' => false,
@@ -77,7 +82,7 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
          'layout' => NULL,
          'border' => false,
          'icon' => '',
-         'labelWidth' => 100,
+         'labelWidth' => 0,
          'labelAlign' => 'left',
       )),
     ),
@@ -98,10 +103,5 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
   ),
    'classDefinitions' => 
   array (
-    0 => 
-    array (
-      'classname' => 'Electronic',
-      'fieldname' => 'attributes',
-    ),
   ),
 ));

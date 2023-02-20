@@ -2,12 +2,12 @@
 
 /**
  * Fields Summary:
- * - cellularType [select]
+ * - batteryPoewerInmah [input]
  */
 
 return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
    'dao' => NULL,
-   'key' => 'CellularTechnology',
+   'key' => 'batterPowerInmaH',
    'parentClass' => '',
    'implementsInterfaces' => '',
    'title' => '',
@@ -29,10 +29,10 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
     array (
       0 => 
       Pimcore\Model\DataObject\ClassDefinition\Layout\Panel::__set_state(array(
-         'name' => 'Cellular Technology',
+         'name' => 'Battery Power in Mah',
          'type' => NULL,
          'region' => NULL,
-         'title' => '',
+         'title' => 'Screen Resolution',
          'width' => '',
          'height' => '',
          'collapsible' => false,
@@ -43,9 +43,9 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
          'children' => 
         array (
           0 => 
-          Pimcore\Model\DataObject\ClassDefinition\Data\Select::__set_state(array(
-             'name' => 'cellularType',
-             'title' => 'Cellular Type',
+          Pimcore\Model\DataObject\ClassDefinition\Data\Input::__set_state(array(
+             'name' => 'batteryPoewerInmah',
+             'title' => 'Battery Power In mah',
              'tooltip' => '',
              'mandatory' => false,
              'noteditable' => false,
@@ -54,7 +54,7 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
              'style' => '',
              'permissions' => NULL,
              'datatype' => 'data',
-             'fieldtype' => 'select',
+             'fieldtype' => 'input',
              'relationType' => false,
              'invisible' => false,
              'visibleGridView' => false,
@@ -62,35 +62,15 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
              'blockedVarsForExport' => 
             array (
             ),
-             'options' => 
-            array (
-              0 => 
-              array (
-                'key' => '2G',
-                'value' => '2G',
-              ),
-              1 => 
-              array (
-                'key' => '3G',
-                'value' => '3G',
-              ),
-              2 => 
-              array (
-                'key' => '4G',
-                'value' => '4G',
-              ),
-              3 => 
-              array (
-                'key' => '5G',
-                'value' => '5G',
-              ),
-            ),
              'width' => '',
-             'defaultValue' => '',
-             'optionsProviderClass' => '',
-             'optionsProviderData' => '',
+             'defaultValue' => NULL,
              'columnLength' => 190,
-             'dynamicOptions' => false,
+             'regex' => '',
+             'regexFlags' => 
+            array (
+            ),
+             'unique' => false,
+             'showCharCount' => false,
              'defaultValueGenerator' => '',
           )),
         ),
@@ -102,7 +82,7 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
          'layout' => NULL,
          'border' => false,
          'icon' => '',
-         'labelWidth' => 100,
+         'labelWidth' => 0,
          'labelAlign' => 'left',
       )),
     ),

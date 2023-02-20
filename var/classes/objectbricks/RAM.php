@@ -2,7 +2,7 @@
 
 /**
  * Fields Summary:
- * - ram [input]
+ * - ram [select]
  */
 
 return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
@@ -43,7 +43,7 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
          'children' => 
         array (
           0 => 
-          Pimcore\Model\DataObject\ClassDefinition\Data\Input::__set_state(array(
+          Pimcore\Model\DataObject\ClassDefinition\Data\Select::__set_state(array(
              'name' => 'ram',
              'title' => 'Ram',
              'tooltip' => '',
@@ -54,7 +54,7 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
              'style' => '',
              'permissions' => NULL,
              'datatype' => 'data',
-             'fieldtype' => 'input',
+             'fieldtype' => 'select',
              'relationType' => false,
              'invisible' => false,
              'visibleGridView' => false,
@@ -63,14 +63,11 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
             array (
             ),
              'width' => '',
-             'defaultValue' => NULL,
+             'defaultValue' => 'db_value_1',
+             'optionsProviderClass' => 'App\\DynamicDropdown\\Options',
+             'optionsProviderData' => '',
              'columnLength' => 190,
-             'regex' => '',
-             'regexFlags' => 
-            array (
-            ),
-             'unique' => false,
-             'showCharCount' => false,
+             'dynamicOptions' => false,
              'defaultValueGenerator' => '',
           )),
         ),
@@ -82,7 +79,7 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
          'layout' => NULL,
          'border' => false,
          'icon' => '',
-         'labelWidth' => 100,
+         'labelWidth' => 0,
          'labelAlign' => 'left',
       )),
     ),

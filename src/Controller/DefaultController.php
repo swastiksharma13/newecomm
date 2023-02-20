@@ -20,15 +20,7 @@ class DefaultController extends FrontendController
         return $this->render('default/default.html.twig');
     }
 
-    #[Route('/' , name: 'app_electronic_index')]
-    public function index(Request $request): Response
-    {
-        $products = Electronic::getList([]);
-        dd($products);
+  
 
-        return $this->render('product/index.html.twig', [
-            'title' => 'Products',
-            'products' => $products
-        ]);
-    }
+    
 }

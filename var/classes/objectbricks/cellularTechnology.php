@@ -2,12 +2,12 @@
 
 /**
  * Fields Summary:
- * - batteryPoewerInmah [input]
+ * - cellularTechnology [input]
  */
 
 return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
    'dao' => NULL,
-   'key' => 'BatteryPowerInmaH',
+   'key' => 'cellularTechnology',
    'parentClass' => '',
    'implementsInterfaces' => '',
    'title' => '',
@@ -29,10 +29,10 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
     array (
       0 => 
       Pimcore\Model\DataObject\ClassDefinition\Layout\Panel::__set_state(array(
-         'name' => 'Battery In mah',
+         'name' => 'Cellular Technology',
          'type' => NULL,
          'region' => NULL,
-         'title' => 'Battery In mah',
+         'title' => 'Cellular Technology',
          'width' => '',
          'height' => '',
          'collapsible' => false,
@@ -44,8 +44,8 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
         array (
           0 => 
           Pimcore\Model\DataObject\ClassDefinition\Data\Input::__set_state(array(
-             'name' => 'batteryPoewerInmah',
-             'title' => 'Battery Poewer Inmah',
+             'name' => 'cellularTechnology',
+             'title' => 'Cellular Technology',
              'tooltip' => '',
              'mandatory' => false,
              'noteditable' => false,
@@ -82,7 +82,7 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
          'layout' => NULL,
          'border' => false,
          'icon' => '',
-         'labelWidth' => 100,
+         'labelWidth' => 0,
          'labelAlign' => 'left',
       )),
     ),

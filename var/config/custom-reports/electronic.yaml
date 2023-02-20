@@ -1,0 +1,47 @@
+pimcore:
+    custom_report:
+        definitions:
+            electronic:
+                name: electronic
+                sql: ''
+                dataSourceConfig:
+                    -
+                        sql: 'category,Count(*)'
+                        from: object_electronic
+                        where: ''
+                        groupby: category
+                        type: sql
+                columnConfiguration:
+                    -
+                        name: category
+                        display: true
+                        export: true
+                        order: true
+                        width: ''
+                        label: ''
+                        id: extModel2661-1
+                    -
+                        name: 'Count(*)'
+                        display: true
+                        export: true
+                        order: true
+                        width: ''
+                        label: ''
+                        id: extModel2661-2
+                niceName: ''
+                group: ''
+                groupIconClass: ''
+                iconClass: ''
+                menuShortcut: true
+                reportClass: ''
+                chartType: pie
+                pieColumn: 'Count(*)'
+                pieLabelColumn: category
+                xAxis: null
+                yAxis: {  }
+                modificationDate: 1676270055
+                creationDate: 1676269990
+                shareGlobally: true
+                sharedUserNames:
+                    - admin
+                sharedRoleNames: {  }

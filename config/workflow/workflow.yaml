@@ -91,7 +91,7 @@ pimcore:
                 reject_product:
                     from: [new,data_entry,data_entry_completed,ready_for_media,media_update_done,review_needed,reviewer_in_progress]
                     to: review_rejected
-                    guard: "is_granted('ROLE_REVIEW')"
+                    guard: "is_granted('ROLE_REVIEWER')"
                     options:
                         label: "Reject the product"
                         notes:
@@ -101,7 +101,7 @@ pimcore:
                 start_processing_product:
                     from: new
                     to: data_entry
-                    guard: "is_granted('ROLE_REVIEW')"
+                    guard: "is_granted('ROLE_REVIEWERROLE')"
                     options:
                         label: "Start Processing"
 
@@ -129,42 +129,42 @@ pimcore:
                 media_processing:
                     from: ready_for_media
                     to: media_update_inprogress
-                    guard: "is_granted('ROLE_MEDIA')"
+                    guard: "is_granted('ROLE_MEDIAROLE')"
                     options:
                         label: "Start Media update"
 
                 media_processing_completed:
                     from: media_update_inprogress
                     to: media_update_done
-                    guard: "is_granted('ROLE_MEDIA')"
+                    guard: "is_granted('ROLE_MEDIAROLE')"
                     options:
                         label: "Media Update Done"
                 
                 send_for_review:
                     from: media_update_done
                     to: review_needed
-                    guard: "is_granted('ROLE_MEDIA')"
+                    guard: "is_granted('ROLE_MEDIAROLE')"
                     options:
                         label: "Send For Review"
 
                 review_started: 
                     from: review_needed
                     to: reviewer_in_progress
-                    guard: "is_granted('ROLE_REVIEW')"
+                    guard: "is_granted('ROLE_REVIEWERROLE')"
                     options:
                         label: "Start Review"              
                 
                 reviewer_approved: 
                     from: reviewer_in_progress
                     to: reviewer_approved
-                    guard: "is_granted('ROLE_REVIEW')"
+                    guard: "is_granted('ROLE_REVIEWERROLE')"
                     options:
                         label: "Product Approved"
 
                 publish:
                     from: reviewer_approved
                     to: published
-                    guard: "is_granted('ROLE_REVIEW')"
+                    guard: "is_granted('ROLE_REVIEWERROLE')"
                     options:
                         label: "Publish the product"
                         notes:
@@ -179,14 +179,14 @@ pimcore:
                 send_back_to_media_entry:
                     from: reviewer_in_progress
                     to: ready_for_media
-                    guard: "is_granted('ROLE_REVIEW')"
+                    guard: "is_granted('ROLE_REVIEWERROLE')"
                     options:
                         label: "Send Back for Media Update"
 
                 send_back_to_data_entry:
                     from: reviewer_in_progress
                     to: data_entry
-                    guard: "is_granted('ROLE_REVIEW')"
+                    guard: "is_granted('ROLE_REVIEWERROLE')"
                     options:
                         label: "Send Back for Data Entry"
                 
