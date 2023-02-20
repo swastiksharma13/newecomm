@@ -1,33 +1,31 @@
 pimcore_data_hub:
     configurations:
-        Manufacturer:
+        Test:
             general:
                 active: true
                 type: dataImporterDataObject
-                name: Manufacturer
+                name: Test
                 description: ''
                 group: ''
                 path: null
-                modificationDate: 1676226666
-                createDate: 1676225927
+                modificationDate: 1676548913
+                createDate: 1676548557
             loaderConfig:
-                type: upload
+                type: asset
                 settings:
-                    uploadFilePath: Manufacturer/upload.import
+                    assetPath: /export.csv
             interpreterConfig:
                 type: csv
                 settings:
                     skipFirstRow: true
-                    delimiter: ','
+                    delimiter: ;
                     enclosure: '"'
                     escape: \
             resolverConfig:
                 elementType: dataObject
-                dataObjectClassId: manufacturerBrand
+                dataObjectClassId: electronic
                 loadingStrategy:
-                    type: id
-                    settings:
-                        dataSourceIndex: '0'
+                    type: notLoad
                 createLocationStrategy:
                     type: staticPath
                     settings:
@@ -37,26 +35,14 @@ pimcore_data_hub:
                 publishingStrategy:
                     type: alwaysPublish
             processingConfig:
-                executionType: parallel
+                executionType: sequential
+                doArchiveImportFile: true
                 idDataIndex: ''
             mappingConfig:
                 -
-                    label: 'new column'
+                    label: name
                     dataSourceIndex:
-                        - '5'
-                    transformationResultType: default
-                    dataTarget:
-                        type: direct
-                        settings:
-                            fieldName: key
-                            language: ''
-                            writeIfTargetIsNotEmpty: true
-                            writeIfSourceIsEmpty: true
-                    transformationPipeline: {  }
-                -
-                    label: 'new column'
-                    dataSourceIndex:
-                        - '5'
+                        - '3'
                     transformationResultType: default
                     dataTarget:
                         type: direct
@@ -66,10 +52,23 @@ pimcore_data_hub:
                             writeIfTargetIsNotEmpty: true
                             writeIfSourceIsEmpty: true
                     transformationPipeline: {  }
+                -
+                    label: Description
+                    dataSourceIndex:
+                        - '4'
+                    transformationResultType: default
+                    dataTarget:
+                        type: direct
+                        settings:
+                            fieldName: description
+                            language: en
+                            writeIfTargetIsNotEmpty: true
+                            writeIfSourceIsEmpty: true
+                    transformationPipeline: {  }
             executionConfig:
-                scheduleType: recurring
+                scheduleType: job
                 cronDefinition: ''
-                scheduledAt: ''
+                scheduledAt: '16-02-2023 00:00'
             permissions:
                 user: {  }
                 role: {  }

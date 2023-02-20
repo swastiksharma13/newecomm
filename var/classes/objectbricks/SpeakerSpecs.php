@@ -4,7 +4,7 @@
  * Fields Summary:
  * - SpeakerOutputMode [select]
  * - SpeakerOutputPower [select]
- * - SweakerWattage [select]
+ * - SpeakerWattage [select]
  * - SpeakerCommunicationTechnology [multiselect]
  * - WaterResistanceLevel [select]
  * - InternetServicesSupported [multiselect]
@@ -167,8 +167,8 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
               )),
               2 => 
               Pimcore\Model\DataObject\ClassDefinition\Data\Select::__set_state(array(
-                 'name' => 'SweakerWattage',
-                 'title' => 'Sweaker Wattage',
+                 'name' => 'SpeakerWattage',
+                 'title' => 'Speaker Wattage',
                  'tooltip' => '',
                  'mandatory' => false,
                  'noteditable' => false,

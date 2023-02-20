@@ -7,10 +7,10 @@
 return Pimcore\Model\DataObject\ClassDefinition\CustomLayout::__set_state(array(
    'dao' => NULL,
    'id' => '5',
-   'name' => 'Media Update in Progress',
+   'name' => 'Media Update In Progress',
    'description' => '',
-   'creationDate' => 1676457638,
-   'modificationDate' => 1676457780,
+   'creationDate' => 1676546746,
+   'modificationDate' => 1676547915,
    'userOwner' => 2,
    'userModification' => 0,
    'classId' => 'electronic',
