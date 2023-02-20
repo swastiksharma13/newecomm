@@ -20,9 +20,9 @@ class DateValidation
  $end=$object->getSaleInformation()->getSalesInformation()->getReleaseDate() ;
 
  if ($start > $end) {
- throw new \Exception("Manufacturing Date can't be greater than Release date");
+ throw new \Exception("Manufacturing Date can't be greater than Releasedate");
  }
  }
  }
  
-}
+} 

@@ -16,6 +16,7 @@ class ElectronicController extends FrontendController
     public function index(){
         $objects = new Electronic\Listing();
         $objects->setObjectTypes([Electronic::OBJECT_TYPE_VARIANT]);
+       
         if($objects == null){
             return new Response("<div style='color:red;'>Error !! Product not fount</div>");
         }
@@ -25,6 +26,16 @@ class ElectronicController extends FrontendController
         foreach($objects as $product){
         //  dd($product);
         if($product->getObjectType() == 'real-object'){
+
+            // $category = array();
+            // $category = $product->getCategory(); 
+            // $cates = array();
+            // foreach($category as $cat){
+            //     array_push($cates , $cat->getName());
+            // }
+            // dd($cates);
+
+
         $data = array(
         'name' => $product->getName() ? $product->getName() : null ,
         'Color' => $product->getColor(),

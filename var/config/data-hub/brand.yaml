@@ -1,0 +1,13 @@
+pimcore_data_hub:
+    configurations:
+        brand:
+            general:
+                type: dataImporterDataObject
+                path: null
+                name: brand
+                modificationDate: 1676551428
+                createDate: 1676551428
+            workspaces: {  }
+            permissions:
+                user: {  }
+                role: {  }

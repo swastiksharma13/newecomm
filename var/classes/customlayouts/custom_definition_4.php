@@ -10,7 +10,7 @@ return Pimcore\Model\DataObject\ClassDefinition\CustomLayout::__set_state(array(
    'name' => 'mediarole1',
    'description' => '',
    'creationDate' => 1676274688,
-   'modificationDate' => 1676274791,
+   'modificationDate' => 1676546602,
    'userOwner' => 2,
    'userModification' => 0,
    'classId' => 'electronic',

@@ -2,23 +2,23 @@ pimcore_data_hub:
     configurations:
         ElectronicImporter:
             general:
+                active: true
                 type: dataImporterDataObject
                 name: ElectronicImporter
                 description: ''
                 group: DataImporter
-                active: false
                 path: null
-                modificationDate: 1676229581
+                modificationDate: 1676551766
                 createDate: 1676229398
             loaderConfig:
-                type: upload
+                type: asset
                 settings:
-                    uploadFilePath: ElectronicImporter/upload.import
+                    assetPath: '/export (5).csv'
             interpreterConfig:
                 type: csv
                 settings:
                     skipFirstRow: true
-                    delimiter: ','
+                    delimiter: ;
                     enclosure: '"'
                     escape: \
             resolverConfig:
@@ -33,7 +33,9 @@ pimcore_data_hub:
                     settings:
                         path: '/Product Data/Electronics/Mobiles/Sumsung/s10/s10ultra'
                 locationUpdateStrategy:
-                    type: noChange
+                    type: staticPath
+                    settings:
+                        path: /
                 publishingStrategy:
                     type: alwaysPublish
             processingConfig:
