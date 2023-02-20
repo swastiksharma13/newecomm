@@ -13,8 +13,7 @@
  * - electronicType [select]
  * - color [select]
  * - country [country]
- * - Brand [manyToOneRelation]
- * - Category [manyToManyObjectRelation]
+ * - category [manyToManyObjectRelation]
  * - image [image]
  * - genericImage [imageGallery]
  * - attributes [objectbricks]
@@ -22,8 +21,6 @@
  * - location [geopoint]
  * - objectType [select]
  * - review [manyToOneRelation]
- * - ManufacturingDate [date]
- * - LaunchDate [date]
  */
 
 return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
@@ -406,48 +403,8 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'restrictTo' => '',
               )),
               6 => 
-              Pimcore\Model\DataObject\ClassDefinition\Data\ManyToOneRelation::__set_state(array(
-                 'name' => 'Brand',
-                 'title' => 'Brand',
-                 'tooltip' => '',
-                 'mandatory' => false,
-                 'noteditable' => false,
-                 'index' => false,
-                 'locked' => false,
-                 'style' => '',
-                 'permissions' => NULL,
-                 'datatype' => 'data',
-                 'fieldtype' => 'manyToOneRelation',
-                 'relationType' => true,
-                 'invisible' => false,
-                 'visibleGridView' => false,
-                 'visibleSearch' => false,
-                 'blockedVarsForExport' => 
-                array (
-                ),
-                 'classes' => 
-                array (
-                  0 => 
-                  array (
-                    'classes' => 'Brand',
-                  ),
-                ),
-                 'pathFormatterClass' => '',
-                 'width' => '',
-                 'assetUploadPath' => '',
-                 'objectsAllowed' => true,
-                 'assetsAllowed' => false,
-                 'assetTypes' => 
-                array (
-                ),
-                 'documentsAllowed' => false,
-                 'documentTypes' => 
-                array (
-                ),
-              )),
-              7 => 
               Pimcore\Model\DataObject\ClassDefinition\Data\ManyToManyObjectRelation::__set_state(array(
-                 'name' => 'Category',
+                 'name' => 'category',
                  'title' => 'Category',
                  'tooltip' => '',
                  'mandatory' => false,
@@ -460,7 +417,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'fieldtype' => 'manyToManyObjectRelation',
                  'relationType' => true,
                  'invisible' => false,
-                 'visibleGridView' => true,
+                 'visibleGridView' => false,
                  'visibleSearch' => false,
                  'blockedVarsForExport' => 
                 array (
@@ -476,7 +433,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'width' => '',
                  'height' => '',
                  'maxItems' => NULL,
-                 'visibleFields' => 'Name',
+                 'visibleFields' => 'id,fullpath',
                  'allowToCreateNewObject' => false,
                  'optimizedAdminLoading' => false,
                  'enableTextSelection' => false,
@@ -673,7 +630,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                 ),
                  'allowedTypes' => 
                 array (
-                  0 => 'SaleInformation',
+                  0 => 'salesInformation',
                 ),
                  'maxItems' => NULL,
                  'border' => false,
@@ -878,85 +835,6 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
              'labelWidth' => 100,
              'labelAlign' => 'left',
           )),
-          6 => 
-          Pimcore\Model\DataObject\ClassDefinition\Layout\Panel::__set_state(array(
-             'name' => 'ProductDelivery',
-             'type' => NULL,
-             'region' => NULL,
-             'title' => 'Product Delivery',
-             'width' => '',
-             'height' => '',
-             'collapsible' => false,
-             'collapsed' => false,
-             'bodyStyle' => '',
-             'datatype' => 'layout',
-             'permissions' => NULL,
-             'children' => 
-            array (
-              0 => 
-              Pimcore\Model\DataObject\ClassDefinition\Data\Date::__set_state(array(
-                 'name' => 'ManufacturingDate',
-                 'title' => 'Manufacturing Date',
-                 'tooltip' => '',
-                 'mandatory' => false,
-                 'noteditable' => false,
-                 'index' => false,
-                 'locked' => false,
-                 'style' => '',
-                 'permissions' => NULL,
-                 'datatype' => 'data',
-                 'fieldtype' => 'date',
-                 'relationType' => false,
-                 'invisible' => false,
-                 'visibleGridView' => false,
-                 'visibleSearch' => false,
-                 'blockedVarsForExport' => 
-                array (
-                ),
-                 'queryColumnType' => 'bigint(20)',
-                 'columnType' => 'bigint(20)',
-                 'defaultValue' => NULL,
-                 'useCurrentDate' => false,
-                 'defaultValueGenerator' => '',
-              )),
-              1 => 
-              Pimcore\Model\DataObject\ClassDefinition\Data\Date::__set_state(array(
-                 'name' => 'LaunchDate',
-                 'title' => 'Launch Date',
-                 'tooltip' => '',
-                 'mandatory' => false,
-                 'noteditable' => false,
-                 'index' => false,
-                 'locked' => false,
-                 'style' => '',
-                 'permissions' => NULL,
-                 'datatype' => 'data',
-                 'fieldtype' => 'date',
-                 'relationType' => false,
-                 'invisible' => false,
-                 'visibleGridView' => false,
-                 'visibleSearch' => false,
-                 'blockedVarsForExport' => 
-                array (
-                ),
-                 'queryColumnType' => 'bigint(20)',
-                 'columnType' => 'bigint(20)',
-                 'defaultValue' => NULL,
-                 'useCurrentDate' => false,
-                 'defaultValueGenerator' => '',
-              )),
-            ),
-             'locked' => false,
-             'blockedVarsForExport' => 
-            array (
-            ),
-             'fieldtype' => 'panel',
-             'layout' => NULL,
-             'border' => false,
-             'icon' => '',
-             'labelWidth' => 0,
-             'labelAlign' => 'left',
-          )),
         ),
          'locked' => false,
          'blockedVarsForExport' => 
@@ -978,7 +856,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
      'labelWidth' => 100,
      'labelAlign' => 'left',
   )),
-   'icon' => '/bundles/pimcoreadmin/img/flat-color-icons/electro_devices.svg',
+   'icon' => '',
    'previewUrl' => '',
    'group' => 'Product Data',
    'showAppLoggerTab' => false,

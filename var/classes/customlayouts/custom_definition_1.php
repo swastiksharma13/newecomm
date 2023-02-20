@@ -13,7 +13,7 @@ return Pimcore\Model\DataObject\ClassDefinition\CustomLayout::__set_state(array(
    'modificationDate' => 1676275167,
    'userOwner' => 2,
    'userModification' => 0,
-   'classId' => 'Laptop',
+   'classId' => 'electronic',
    'layoutDefinitions' => 
   Pimcore\Model\DataObject\ClassDefinition\Layout\Panel::__set_state(array(
      'name' => 'pimcore_root',
