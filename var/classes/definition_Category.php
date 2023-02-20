@@ -15,11 +15,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
    'name' => 'Category',
    'description' => '',
    'creationDate' => 0,
-<<<<<<< HEAD
-   'modificationDate' => 1676012646,
-=======
    'modificationDate' => 1676270272,
->>>>>>> origin/ravi
    'userOwner' => 2,
    'userModification' => 2,
    'parentClass' => '',
