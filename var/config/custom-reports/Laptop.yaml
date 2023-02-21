@@ -1,0 +1,47 @@
+pimcore:
+    custom_report:
+        definitions:
+            Laptop:
+                name: Laptop
+                sql: ''
+                dataSourceConfig:
+                    -
+                        sql: 'category,Count(*)'
+                        from: object_Laptop
+                        where: ''
+                        groupby: Category
+                        type: sql
+                columnConfiguration:
+                    -
+                        name: Category
+                        display: true
+                        export: true
+                        order: true
+                        width: ''
+                        label: ''
+                        id: extModel791-1
+                    -
+                        name: 'Count(*)'
+                        display: true
+                        export: true
+                        order: true
+                        width: ''
+                        label: ''
+                        id: extModel791-2
+                niceName: ''
+                group: ''
+                groupIconClass: ''
+                iconClass: ''
+                menuShortcut: true
+                reportClass: ''
+                chartType: pie
+                pieColumn: 'Count(*)'
+                pieLabelColumn: Category
+                xAxis: null
+                yAxis: {  }
+                modificationDate: 1676971782
+                creationDate: 1676971702
+                shareGlobally: true
+                sharedUserNames:
+                    - newecomm
+                sharedRoleNames: {  }
