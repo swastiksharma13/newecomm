@@ -10,7 +10,7 @@ return Pimcore\Model\DataObject\ClassDefinition\CustomLayout::__set_state(array(
    'name' => 'Media',
    'description' => '',
    'creationDate' => 1676228243,
-   'modificationDate' => 1676270216,
+   'modificationDate' => 1676902411,
    'userOwner' => 2,
    'userModification' => 0,
    'classId' => 'Laptop',

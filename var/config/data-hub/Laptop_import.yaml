@@ -2,12 +2,74 @@ pimcore_data_hub:
     configurations:
         Laptop_import:
             general:
+                active: true
                 type: dataImporterDataObject
-                path: null
                 name: Laptop_import
-                modificationDate: 1676225583
+                description: ''
+                group: ''
+                path: null
+                modificationDate: 1676957826
                 createDate: 1676225583
-            workspaces: {  }
+            loaderConfig:
+                type: asset
+                settings:
+                    assetPath: '/export (1).csv'
+            interpreterConfig:
+                type: csv
+                settings:
+                    skipFirstRow: true
+                    delimiter: ;
+                    enclosure: '"'
+                    escape: \
+            resolverConfig:
+                elementType: dataObject
+                dataObjectClassId: Laptop
+                loadingStrategy:
+                    type: notLoad
+                createLocationStrategy:
+                    type: staticPath
+                    settings:
+                        path: /
+                locationUpdateStrategy:
+                    type: noChange
+                publishingStrategy:
+                    type: alwaysPublish
+            processingConfig:
+                executionType: sequential
+                doArchiveImportFile: true
+                idDataIndex: ''
+            mappingConfig:
+                -
+                    label: Laptop_ID
+                    dataSourceIndex:
+                        - '3'
+                    transformationResultType: default
+                    dataTarget:
+                        type: direct
+                        settings:
+                            fieldName: Laptop_ID
+                            language: ''
+                            writeIfTargetIsNotEmpty: true
+                            writeIfSourceIsEmpty: true
+                    transformationPipeline: {  }
+                -
+                    label: Sku
+                    dataSourceIndex:
+                        - '4'
+                    transformationResultType: default
+                    dataTarget:
+                        type: direct
+                        settings:
+                            fieldName: Sku
+                            language: ''
+                            writeIfTargetIsNotEmpty: true
+                            writeIfSourceIsEmpty: true
+                    transformationPipeline: {  }
+            executionConfig:
+                scheduleType: job
+                cronDefinition: ''
+                scheduledAt: '21-02-2023 00:00'
             permissions:
                 user: {  }
                 role: {  }
+            workspaces: {  }

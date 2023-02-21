@@ -32,7 +32,7 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
     array (
       0 => 
       Pimcore\Model\DataObject\ClassDefinition\Layout\Tabpanel::__set_state(array(
-         'name' => 'LD',
+         'name' => 'LaptopDetails',
          'type' => NULL,
          'region' => NULL,
          'title' => 'Laptop Details',

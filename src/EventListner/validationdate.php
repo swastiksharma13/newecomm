@@ -6,14 +6,21 @@ use Pimcore\Event\Model\DataObjectEvent;
 use Pimcore\Event\Model\AssetEvent;
 use Pimcore\Event\Model\DocumentEvent;
 use Pimcore\Model\Notification\Service\NotificationService;
-use Pimcore\Model\DataObject\Validation;
+use Pimcore\Model\DataObject\Laptop;
 
 class validationdate
 {
     public function onObjectPreUpdate(\Pimcore\Event\Model\DataObjectEvent $e)
-    {$object = $e->getObject();if ($object instanceof Validation) 
-        {$ManufacturingDate = $object->getManufacturingDate();$ReleaseDate=$object->getReleaseDate();
-            if ($ManufacturingDate > $ReleaseDate) {throw new \Exception("Start Date cant be greater than end date");
+
+    {
+        $object = $e->getObject();
+        if ($object instanceof Laptop) 
+        {
+            $ManufacturingDate = $object->getManufacturingDate();
+            $ReleaseDate=$object->getReleaseDate();
+            if ($ManufacturingDate > $ReleaseDate) 
+            {
+                throw new \Exception("Manufacturing Date cannot be greater than Relaese Date");
             }
         }
     }

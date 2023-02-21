@@ -10,7 +10,7 @@ return Pimcore\Model\DataObject\ClassDefinition\CustomLayout::__set_state(array(
    'name' => 'DataEntry',
    'description' => '',
    'creationDate' => 1676228193,
-   'modificationDate' => 1676228232,
+   'modificationDate' => 1676914098,
    'userOwner' => 2,
    'userModification' => 0,
    'classId' => 'Laptop',
@@ -149,57 +149,6 @@ return Pimcore\Model\DataObject\ClassDefinition\CustomLayout::__set_state(array(
                  'defaultValueGenerator' => '',
               )),
               3 => 
-              Pimcore\Model\DataObject\ClassDefinition\Data\Select::__set_state(array(
-                 'name' => 'LaptopType',
-                 'title' => 'Laptop Type',
-                 'tooltip' => '',
-                 'mandatory' => false,
-                 'noteditable' => false,
-                 'index' => false,
-                 'locked' => false,
-                 'style' => '',
-                 'permissions' => NULL,
-                 'datatype' => 'data',
-                 'fieldtype' => 'select',
-                 'relationType' => false,
-                 'invisible' => false,
-                 'visibleGridView' => false,
-                 'visibleSearch' => false,
-                 'blockedVarsForExport' => 
-                array (
-                ),
-                 'options' => 
-                array (
-                  0 => 
-                  array (
-                    'key' => 'Premium Laptops',
-                    'value' => 'Premium Laptops',
-                  ),
-                  1 => 
-                  array (
-                    'key' => 'Executive Laptops',
-                    'value' => 'Executive Laptops',
-                  ),
-                  2 => 
-                  array (
-                    'key' => 'Daily Use ',
-                    'value' => 'Daily Use ',
-                  ),
-                  3 => 
-                  array (
-                    'key' => 'Gaming Laptop',
-                    'value' => 'Gaming Laptop',
-                  ),
-                ),
-                 'width' => '',
-                 'defaultValue' => '',
-                 'optionsProviderClass' => '',
-                 'optionsProviderData' => '',
-                 'columnLength' => 190,
-                 'dynamicOptions' => false,
-                 'defaultValueGenerator' => '',
-              )),
-              4 => 
               Pimcore\Model\DataObject\ClassDefinition\Data\ManyToManyObjectRelation::__set_state(array(
                  'name' => 'Category',
                  'title' => 'Category',
@@ -238,7 +187,7 @@ return Pimcore\Model\DataObject\ClassDefinition\CustomLayout::__set_state(array(
                 array (
                 ),
               )),
-              5 => 
+              4 => 
               Pimcore\Model\DataObject\ClassDefinition\Data\ManyToOneRelation::__set_state(array(
                  'name' => 'Brand',
                  'title' => 'Brand',
@@ -468,7 +417,7 @@ return Pimcore\Model\DataObject\ClassDefinition\CustomLayout::__set_state(array(
              'children' => 
             array (
               0 => 
-              Pimcore\Model\DataObject\ClassDefinition\Data\Datetime::__set_state(array(
+              Pimcore\Model\DataObject\ClassDefinition\Data\Date::__set_state(array(
                  'name' => 'ManufacturingDate',
                  'title' => 'Manufacturing Date',
                  'tooltip' => '',
@@ -479,7 +428,7 @@ return Pimcore\Model\DataObject\ClassDefinition\CustomLayout::__set_state(array(
                  'style' => '',
                  'permissions' => NULL,
                  'datatype' => 'data',
-                 'fieldtype' => 'datetime',
+                 'fieldtype' => 'date',
                  'relationType' => false,
                  'invisible' => false,
                  'visibleGridView' => false,
@@ -494,7 +443,7 @@ return Pimcore\Model\DataObject\ClassDefinition\CustomLayout::__set_state(array(
                  'defaultValueGenerator' => '',
               )),
               1 => 
-              Pimcore\Model\DataObject\ClassDefinition\Data\Datetime::__set_state(array(
+              Pimcore\Model\DataObject\ClassDefinition\Data\Date::__set_state(array(
                  'name' => 'ReleaseDate',
                  'title' => 'Release Date',
                  'tooltip' => '',
@@ -505,7 +454,7 @@ return Pimcore\Model\DataObject\ClassDefinition\CustomLayout::__set_state(array(
                  'style' => '',
                  'permissions' => NULL,
                  'datatype' => 'data',
-                 'fieldtype' => 'datetime',
+                 'fieldtype' => 'date',
                  'relationType' => false,
                  'invisible' => false,
                  'visibleGridView' => false,
