@@ -17,8 +17,8 @@ class CustomOptions implements SelectOptionsProviderInterface
     function getOptions($context, $fieldDefinition)
     {
         return [
-            ["value" => "db_value_1", "key" => "Valu5778"],
-            ["value" => "db_value_2", "key" => "Valu45678"],
+            ["value" => "db_value_1", "key" => "Spotify"],
+            ["value" => "db_value_2", "key" => "Apple Music"],
         ];
     }
 

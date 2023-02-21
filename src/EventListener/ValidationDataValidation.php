@@ -7,7 +7,11 @@ use Pimcore\Event\Model\DataObjectEvent;
 use Pimcore\Event\Model\AssetEvent;
 use Pimcore\Event\Model\DocumentEvent;
 use Pimcore\Model\DataObject\Electronic;
+use App\Controller\NotificationController;
 use Pimcore\Model\Notification\Service\NotificationService;
+use Pimcore\Model\Notification\Service;
+
+
 
 
 class ValidationDataValidation
@@ -23,6 +27,16 @@ class ValidationDataValidation
             if ($start > $end) {
                 throw new \Exception("Start Date cant be greater than end date");
             }
+        }
+    }
+    public function beforeUpdate(\Pimcore\Event\Model\DataObjectEvent $event)
+    {
+        $object = $event->getObject();
+        if ($object instanceof Electronic) {
+            $obj = new NotificationController;
+            $userService = new Service\UserService;
+            $notificationService = new NotificationService($userService);
+            $obj->sendNotification($notificationService);
         }
     }
 }
